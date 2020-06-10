@@ -1,0 +1,16 @@
+[
+{
+  "modid": "seedstoneMod",
+  "name": "SeedstoneMod",
+  "description": "Add new seed items and tools.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["gyaly_superx"],
+  "credits": "gyaly_superx",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
