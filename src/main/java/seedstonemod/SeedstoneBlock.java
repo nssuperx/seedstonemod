@@ -21,7 +21,7 @@ public class SeedstoneBlock extends Block {
 	@Override
 	public Item getItemDropped(int meta, Random random, int fortune)
 	{
-		return Item.getItemFromBlock(SeedstoneMod.blockCobbleseedstone);
+		return Item.getItemFromBlock(SeedstoneBlocks.blockCobbleseedstone);
 	}
 
 }

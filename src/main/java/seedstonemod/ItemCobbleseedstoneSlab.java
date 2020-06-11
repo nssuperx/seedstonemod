@@ -6,7 +6,7 @@ import net.minecraft.item.ItemSlab;
 public class ItemCobbleseedstoneSlab extends ItemSlab{
 
 	public ItemCobbleseedstoneSlab(Block block) {
-		super(block, SeedstoneMod.CobbleseedstoneSlabsingle, SeedstoneMod.CobbleseedstoneSlabdouble, block == SeedstoneMod.CobbleseedstoneSlabdouble);
+		super(block, SeedstoneBlocks.CobbleseedstoneSlabsingle, SeedstoneBlocks.CobbleseedstoneSlabdouble, block == SeedstoneBlocks.CobbleseedstoneSlabdouble);
 		this.setUnlocalizedName("cobbleseedstoneslab");
 	}
 
