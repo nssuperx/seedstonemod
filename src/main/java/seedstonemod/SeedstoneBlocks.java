@@ -3,7 +3,6 @@ package seedstonemod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
-import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 
 public class SeedstoneBlocks {
@@ -18,29 +17,16 @@ public class SeedstoneBlocks {
     
     public static void registerBlocks(){
         
-        blockSeedstone = new SeedstoneBlock(Material.rock)
-				.setBlockName("blockSeedstone")
-				.setBlockTextureName("seedstonemod:seedstone_block");
-		GameRegistry.registerBlock(blockSeedstone, "blockSeedstone");
-
-		blockCobbleseedstone = new CobbleseedstoneBlock(Material.rock)
-				.setBlockName("blockCobbleseedstone")
-				.setBlockTextureName("seedstonemod:cobbleseedstone_block");
-		GameRegistry.registerBlock(blockCobbleseedstone, "blockCobbleseedstone");
-
-
-
-		stairsCobbleseedstone = new BlockStairs(blockCobbleseedstone,0){}
-				.setBlockName("stairsCobbleseedstone");
-		stairsCobbleseedstone.setCreativeTab(SeedstoneMod.tabSeedstone);
-		stairsCobbleseedstone.setHarvestLevel("pickaxe", 0);
-		GameRegistry.registerBlock(stairsCobbleseedstone, "stairsCobbleseedstone");
-
-		//slab
+        blockSeedstone = new SeedstoneBlock(Material.rock);
+		blockCobbleseedstone = new CobbleseedstoneBlock(Material.rock);
+		stairsCobbleseedstone = new CobbleseedstoneStairs(blockCobbleseedstone, 0);
 		CobbleseedstoneSlabsingle = new CobbleseedstoneSlab(false);
-        CobbleseedstoneSlabdouble = new CobbleseedstoneSlab(true);
-        
-		GameRegistry.registerBlock(CobbleseedstoneSlabsingle, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabsingle");
+		CobbleseedstoneSlabdouble = new CobbleseedstoneSlab(true);
+		
+		GameRegistry.registerBlock(blockSeedstone, "blockSeedstone");
+		GameRegistry.registerBlock(blockCobbleseedstone, "blockCobbleseedstone");
+		GameRegistry.registerBlock(stairsCobbleseedstone, "stairsCobbleseedstone");
+        GameRegistry.registerBlock(CobbleseedstoneSlabsingle, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabsingle");
 		GameRegistry.registerBlock(CobbleseedstoneSlabdouble, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabdouble");
     }
     
