@@ -211,24 +211,17 @@ public class SeedstoneMod
 		//slab
 		CobbleseedstoneSlabsingle = new CobbleseedstoneSlab(false);
 		CobbleseedstoneSlabdouble = new CobbleseedstoneSlab(true);
-		//slab
-
-
 
 	}
 
 	@EventHandler
 	public void Init(FMLInitializationEvent event )
 	{
-
-
 		//slab
 		GameRegistry.registerBlock(CobbleseedstoneSlabsingle, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabsingle");
 		GameRegistry.registerBlock(CobbleseedstoneSlabdouble, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabdouble");
 
 		SeedstoneRecipes.registerRecipes();
-
-
 
 	}
 
