@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 public class ItemIronseedArmor extends ItemArmor {
 
 	public ItemIronseedArmor(int type){
-		super(SeedstoneMod.IRONSEEDARMOR, 0 ,type);
+		super(SeedstoneItems.IRONSEEDARMOR, 0 ,type);
 		this.setCreativeTab(SeedstoneMod.tabSeedstone);
 	}
 

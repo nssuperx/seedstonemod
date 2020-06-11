@@ -13,7 +13,7 @@ public class SeedstoneTab extends CreativeTabs
 	@Override
 	public Item getTabIconItem()
 	{
-		return Item.getItemFromBlock(SeedstoneMod.blockSeedstone);
+		return Item.getItemFromBlock(SeedstoneBlocks.blockSeedstone);
 	}
 
 }
