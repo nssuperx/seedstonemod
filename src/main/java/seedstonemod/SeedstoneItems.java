@@ -43,46 +43,25 @@ public class SeedstoneItems {
     
     
     public static void registerItems(){
-
-        
-
-		ironseed = new Item()
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("ironseed")
-				.setTextureName("seedstonemod:ironseed_ingot");
+		ironseed = new ItemIronseed();
 		GameRegistry.registerItem(ironseed, "ironseed");
 
 		SEEDSTONE = EnumHelper.addToolMaterial("SEEDSTONE", 1, 131, 4.0F, 1.0F, 5)
 				.setRepairItem(new ItemStack(SeedstoneBlocks.blockCobbleseedstone));
 
-		swordSeedstone = new ItemSword(SEEDSTONE)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("swordSeedstone")
-				.setTextureName("seedstonemod:seedstone_sword");
+		swordSeedstone = new SeedstoneSword(SEEDSTONE);
 		GameRegistry.registerItem(swordSeedstone, "swordSeedstone");
 
-		shovelSeedstone = new ItemSpade(SEEDSTONE)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("shovelSeedstone")
-				.setTextureName("seedstonemod:seedstone_shovel");
+		shovelSeedstone = new SeedstoneShovel(SEEDSTONE);
 		GameRegistry.registerItem(shovelSeedstone, "shovelSeedstone");
 
-		pickaxeSeedstone = new SeedstonePickaxe(SEEDSTONE)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("pickaxeSeedstone")
-				.setTextureName("seedstonemod:seedstone_pickaxe");
+		pickaxeSeedstone = new SeedstonePickaxe(SEEDSTONE);
 		GameRegistry.registerItem(pickaxeSeedstone, "pickaxeSeedstone");
 
-		axeSeedstone = new SeedstoneAxe(SEEDSTONE)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("axeSeedstone")
-				.setTextureName("seedstonemod:seedstone_axe");
+		axeSeedstone = new SeedstoneAxe(SEEDSTONE);
 		GameRegistry.registerItem(axeSeedstone, "axeSeedstone");
 
-		hoeSeedstone = new ItemHoe(SEEDSTONE)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("hoeSeedstone")
-				.setTextureName("seedstonemod:seedstone_hoe");
+		hoeSeedstone = new SeedstoneHoe(SEEDSTONE);
 		GameRegistry.registerItem(hoeSeedstone, "hoeSeedstone");
 
 
@@ -90,34 +69,19 @@ public class SeedstoneItems {
 		IRONSEED = EnumHelper.addToolMaterial("IRONSEED", 2, 700, 6.0F, 2.0F, 14)
 				.setRepairItem(new ItemStack(SeedstoneItems.ironseed));
 
-		swordIronseed = new ItemSword(IRONSEED)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("swordIronseed")
-				.setTextureName("seedstonemod:ironseed_sword");
+		swordIronseed = new IronseedSword(IRONSEED);
 		GameRegistry.registerItem(swordIronseed, "swordIronseed");
 
-		shovelIronseed = new ItemSpade(IRONSEED)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("shovelIronseed")
-				.setTextureName("seedstonemod:ironseed_shovel");
+		shovelIronseed = new IronseedShovel(IRONSEED);
 		GameRegistry.registerItem(shovelIronseed, "shovelIronseed");
 
-		pickaxeIronseed = new IronseedPickaxe(IRONSEED)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("pickaxeIronseed")
-				.setTextureName("seedstonemod:ironseed_pickaxe");
+		pickaxeIronseed = new IronseedPickaxe(IRONSEED);
 		GameRegistry.registerItem(pickaxeIronseed, "pickaxeIronseed");
 
-		axeIronseed = new IronseedAxe(IRONSEED)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("axeIronseed")
-				.setTextureName("seedstonemod:ironseed_axe");
+		axeIronseed = new IronseedAxe(IRONSEED);
 		GameRegistry.registerItem(axeIronseed, "axeIronseed");
 
-		hoeIronseed = new ItemHoe(IRONSEED)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("hoeIronseed")
-				.setTextureName("seedstonemod:ironseed_hoe");
+		hoeIronseed = new IronseedHoe(IRONSEED);
 		GameRegistry.registerItem(hoeIronseed, "hoeIronseed");
 
 
@@ -146,17 +110,10 @@ public class SeedstoneItems {
 		GameRegistry.registerItem(bootsironseed, "bootsIronseed");
 
 
-		bigRottenFlesh = new ItemFood(8, 2.0F, true)
-				.setPotionEffect(Potion.hunger.id, 30, 0, 0.8F)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("bigRottenFlesh")
-				.setTextureName("seedstonemod:bigrottenflesh");
+		bigRottenFlesh = new ItemBigrottenflesh(8, 2.0F, true);
 		GameRegistry.registerItem(bigRottenFlesh, "bigRottenFlesh");
 
-		steakRottenFlesh = new ItemFood(4, 2.0F, true)
-				.setCreativeTab(SeedstoneMod.tabSeedstone)
-				.setUnlocalizedName("steakRottenFlesh")
-				.setTextureName("seedstonemod:steakrottenflesh");
+		steakRottenFlesh = new ItemSteakrottenflesh(4, 2.0F, true);
 		GameRegistry.registerItem(steakRottenFlesh, "steakRottenFlesh");
 
     }
