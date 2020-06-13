@@ -1,3 +1,3 @@
 # seedstonemod
 
-minecraft ver1.7.10 mod
+「種」からツールとか防具が作れるようになるmod。
