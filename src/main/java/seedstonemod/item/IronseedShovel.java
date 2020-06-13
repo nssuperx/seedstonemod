@@ -1,6 +1,7 @@
-package seedstonemod;
+package seedstonemod.item;
 
 import net.minecraft.item.ItemSpade;
+import seedstonemod.SeedstoneMod;
 
 public class IronseedShovel extends ItemSpade{
     public IronseedShovel(ToolMaterial toolMaterial){

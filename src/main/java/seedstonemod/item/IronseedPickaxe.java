@@ -1,6 +1,7 @@
-package seedstonemod;
+package seedstonemod.item;
 
 import net.minecraft.item.ItemPickaxe;
+import seedstonemod.SeedstoneMod;
 
 public class IronseedPickaxe extends ItemPickaxe
 {

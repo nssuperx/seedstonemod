@@ -1,4 +1,4 @@
-package seedstonemod;
+package seedstonemod.block;
 
 import java.util.List;
 import java.util.Random;
@@ -14,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import seedstonemod.SeedstoneMod;
 
 
 public class CobbleseedstoneSlab extends BlockSlab {

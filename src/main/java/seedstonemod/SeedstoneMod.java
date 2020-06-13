@@ -6,6 +6,8 @@ import cpw.mods.fml.common.Mod.Metadata;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import seedstonemod.item.SeedstoneItems;
+import seedstonemod.block.SeedstoneBlocks;
 import net.minecraft.creativetab.CreativeTabs;
 
 @Mod(modid = SeedstoneMod.MODID, name = SeedstoneMod.MODNAME, version = SeedstoneMod.VERSION)

@@ -1,7 +1,8 @@
-package seedstonemod;
+package seedstonemod.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
+import seedstonemod.SeedstoneMod;
 
 public class CobbleseedstoneStairs extends BlockStairs{
     public CobbleseedstoneStairs(Block block, int n){
