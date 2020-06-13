@@ -2,6 +2,7 @@ package seedstonemod;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import seedstonemod.block.SeedstoneBlocks;
 
 public class SeedstoneTab extends CreativeTabs
 {

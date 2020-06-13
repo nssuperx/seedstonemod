@@ -1,6 +1,7 @@
-package seedstonemod;
+package seedstonemod.item;
 
 import net.minecraft.item.ItemSword;
+import seedstonemod.SeedstoneMod;
 
 public class SeedstoneSword extends ItemSword{
     public SeedstoneSword(ToolMaterial toolMaterial){

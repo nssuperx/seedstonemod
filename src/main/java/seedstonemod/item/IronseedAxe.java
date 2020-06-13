@@ -1,6 +1,7 @@
-package seedstonemod;
+package seedstonemod.item;
 
 import net.minecraft.item.ItemAxe;
+import seedstonemod.SeedstoneMod;
 
 public class IronseedAxe extends ItemAxe
 {

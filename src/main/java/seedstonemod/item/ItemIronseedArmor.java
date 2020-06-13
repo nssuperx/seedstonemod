@@ -1,8 +1,9 @@
-package seedstonemod;
+package seedstonemod.item;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import seedstonemod.SeedstoneMod;
 
 public class ItemIronseedArmor extends ItemArmor {
 

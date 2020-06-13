@@ -1,6 +1,7 @@
-package seedstonemod;
+package seedstonemod.item;
 
 import net.minecraft.item.Item;
+import seedstonemod.SeedstoneMod;
 
 public class ItemIronseed extends Item {
     public ItemIronseed(){
