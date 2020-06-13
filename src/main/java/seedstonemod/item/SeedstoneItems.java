@@ -84,8 +84,8 @@ public class SeedstoneItems {
 		GameRegistry.registerItem(bootsironseed, "bootsIronseed");
 
 		// RottenFlesh
-		bigRottenFlesh = new ItemBigrottenflesh(8, 2.0F, true);
-		steakRottenFlesh = new ItemSteakrottenflesh(4, 2.0F, true);
+		bigRottenFlesh = new ItemBigrottenflesh();
+		steakRottenFlesh = new ItemSteakrottenflesh();
 		GameRegistry.registerItem(bigRottenFlesh, "bigRottenFlesh");
 		GameRegistry.registerItem(steakRottenFlesh, "steakRottenFlesh");
 
