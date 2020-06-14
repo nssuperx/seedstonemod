@@ -26,7 +26,7 @@ public class SeedstoneBlocks {
         
         blockSeedstone = new SeedstoneBlock(Material.rock);
 		blockCobbleseedstone = new CobbleseedstoneBlock(Material.rock);
-		stairsCobbleseedstone = new CobbleseedstoneStairs(blockCobbleseedstone, 0);
+		stairsCobbleseedstone = new CobbleseedstoneStairs(blockCobbleseedstone);
 		CobbleseedstoneSlabsingle = new CobbleseedstoneSlab(false);
 		CobbleseedstoneSlabdouble = new CobbleseedstoneSlab(true);
 		

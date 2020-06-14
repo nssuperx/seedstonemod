@@ -12,22 +12,22 @@ public class ItemIronseedArmor extends ItemArmor {
 		switch(type){
 			case 0:
 				setUnlocalizedName("helmetIronseed");
-				setTextureName("seedstonemod:ironseed_helmet");
+				// setTextureName("seedstonemod:ironseed_helmet");
 				break;
 
 			case 1:
 				setUnlocalizedName("chestPlateIronseed");
-				setTextureName("seedstonemod:ironseed_chestplate");
+				// setTextureName("seedstonemod:ironseed_chestplate");
 				break;
 
 			case 2:
 				setUnlocalizedName("leggingsIronseed");
-				setTextureName("seedstonemod:ironseed_leggings");
+				// setTextureName("seedstonemod:ironseed_leggings");
 				break;
 
 			case 3:
 				setUnlocalizedName("bootsIronseed");
-				setTextureName("seedstonemod:ironseed_boots");
+				// setTextureName("seedstonemod:ironseed_boots");
 				break;
 
 		}

@@ -11,8 +11,8 @@ public class SeedstoneBlock extends Block {
 	public SeedstoneBlock(Material material)
 	{
 		super(material);
-		this.setBlockName("blockSeedstone");
-		this.setBlockTextureName("seedstonemod:seedstone_block");
+		// this.setBlockName("blockSeedstone");
+		// this.setBlockTextureName("seedstonemod:seedstone_block");
 		this.setCreativeTab(SeedstoneMod.tabSeedstone);
 		this.setHardness(2.0F);
 		this.setResistance(10.0F);
@@ -21,7 +21,6 @@ public class SeedstoneBlock extends Block {
 		this.setLightLevel(0.0f);
 	}
 
-	@Override
 	public Item getItemDropped(int meta, Random random, int fortune)
 	{
 		return Item.getItemFromBlock(SeedstoneBlocks.blockCobbleseedstone);

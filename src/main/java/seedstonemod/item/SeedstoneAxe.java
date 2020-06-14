@@ -10,7 +10,7 @@ public class SeedstoneAxe extends ItemAxe
 		super(toolMaterial);
 		setCreativeTab(SeedstoneMod.tabSeedstone);
 		setUnlocalizedName("axeSeedstone");
-		setTextureName("seedstonemod:seedstone_axe");
+		// setTextureName("seedstonemod:seedstone_axe");
 	}
 
 }
