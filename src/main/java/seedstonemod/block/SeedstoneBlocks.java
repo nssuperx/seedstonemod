@@ -37,7 +37,8 @@ public class SeedstoneBlocks {
 		GameRegistry.registerBlock(CobbleseedstoneSlabdouble, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabdouble");
 
 		if(event.getSide().isClient()){
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockCobbleseedstone), 0, new ModelResourceLocation(MOD_ID + ":" + "cobbleseedstone_block", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockCobbleseedstone), 0, new ModelResourceLocation(MOD_ID + ":" + "cobbleseedstoneitem", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockSeedstone), 0, new ModelResourceLocation(MOD_ID + ":" + "seedstoneitem", "inventory"));
 		}
     }
     

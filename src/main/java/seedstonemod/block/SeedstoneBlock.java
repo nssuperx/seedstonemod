@@ -11,7 +11,8 @@ public class SeedstoneBlock extends Block {
 	public SeedstoneBlock(Material material)
 	{
 		super(material);
-		// this.setBlockName("blockSeedstone");
+		this.setRegistryName("blockSeedstone");
+		this.setUnlocalizedName("blockSeedstone");
 		// this.setBlockTextureName("seedstonemod:seedstone_block");
 		this.setCreativeTab(SeedstoneMod.tabSeedstone);
 		this.setHardness(2.0F);

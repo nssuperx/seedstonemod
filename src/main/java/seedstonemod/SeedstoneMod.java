@@ -31,7 +31,7 @@ public class SeedstoneMod
 	{
 		ModInfo.loadInfo(meta);
 
-		SeedstoneItems.registerItems();
+		SeedstoneItems.registerItems(event);
 		SeedstoneBlocks.registerBlocks(event);
 
 	}

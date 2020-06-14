@@ -8,7 +8,8 @@ public class CobbleseedstoneBlock extends Block {
 	public CobbleseedstoneBlock(Material material)
 	{
 		super(material);
-		// this.setBlockName("blockCobbleseedstone");
+		this.setRegistryName("blockCobbleseedstone");
+		this.setUnlocalizedName("blockCobbleseedstone");
 		// this.setBlockTextureName("seedstonemod:cobbleseedstone_block");
 		this.setCreativeTab(SeedstoneMod.tabSeedstone);
 		this.setHardness(2.0F);
