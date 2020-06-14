@@ -1,14 +1,19 @@
 package seedstonemod.item;
 
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import seedstonemod.block.SeedstoneBlocks;
 
 public class SeedstoneItems {
+
+	public static final String MOD_ID = "seedstoneMod";
 
 	public static Item ironseed;
 
@@ -37,8 +42,7 @@ public class SeedstoneItems {
 	public static Item bigRottenFlesh;
     public static Item steakRottenFlesh;
 	
-	
-    public static void registerItems(){
+    public static void registerItems(FMLPreInitializationEvent event){
 		// Ironseed
 		ironseed = new ItemIronseed();
 		GameRegistry.registerItem(ironseed, "ironseed");
@@ -88,6 +92,30 @@ public class SeedstoneItems {
 		steakRottenFlesh = new ItemSteakrottenflesh();
 		GameRegistry.registerItem(bigRottenFlesh, "bigRottenFlesh");
 		GameRegistry.registerItem(steakRottenFlesh, "steakRottenFlesh");
+
+		if (event.getSide().isClient()) {
+			ModelLoader.setCustomModelResourceLocation(ironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedingot", "inventory"));
+
+			ModelLoader.setCustomModelResourceLocation(swordSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstoneaxe", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(shovelSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstoneshovel", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(pickaxeSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstonepickaxe", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(axeSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstoneaxe", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(hoeSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstonehoe", "inventory"));
+
+            ModelLoader.setCustomModelResourceLocation(swordIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedaxe", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(shovelIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedshovel", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(pickaxeIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedpickaxe", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(axeIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedaxe", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(hoeIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
+			
+			// ModelLoader.setCustomModelResourceLocation(helmetironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
+			// ModelLoader.setCustomModelResourceLocation(chestPlateironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
+			// ModelLoader.setCustomModelResourceLocation(leggingsironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
+			// ModelLoader.setCustomModelResourceLocation(bootsironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
+
+            ModelLoader.setCustomModelResourceLocation(bigRottenFlesh, 0, new ModelResourceLocation(MOD_ID + ":" + "bigrottenflesh", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(steakRottenFlesh, 0, new ModelResourceLocation(MOD_ID + ":" + "steakrottenflesh", "inventory"));
+        }
 
     }
     
