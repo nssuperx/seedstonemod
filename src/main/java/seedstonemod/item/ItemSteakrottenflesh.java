@@ -11,7 +11,7 @@ public class ItemSteakrottenflesh extends ItemFood{
         setPotionEffect(Potion.hunger.id, 30, 0, 0.05F);
         setCreativeTab(SeedstoneMod.tabSeedstone);
         setUnlocalizedName("steakRottenFlesh");
-        setTextureName("seedstonemod:steakrottenflesh");
+        // setTextureName("seedstonemod:steakrottenflesh");
     }
     
 }

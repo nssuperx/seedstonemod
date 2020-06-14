@@ -10,6 +10,6 @@ public class IronseedPickaxe extends ItemPickaxe
 		super(toolMaterial);
 		setCreativeTab(SeedstoneMod.tabSeedstone);
 		setUnlocalizedName("pickaxeIronseed");
-		setTextureName("seedstonemod:ironseed_pickaxe");
+		// setTextureName("seedstonemod:ironseed_pickaxe");
 	}
 }

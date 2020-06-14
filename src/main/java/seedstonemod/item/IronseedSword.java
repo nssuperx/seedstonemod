@@ -8,7 +8,7 @@ public class IronseedSword extends ItemSword{
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
         setUnlocalizedName("swordIronseed");
-        setTextureName("seedstonemod:ironseed_sword");
+        // setTextureName("seedstonemod:ironseed_sword");
     }
     
 }

@@ -10,6 +10,6 @@ public class SeedstonePickaxe extends ItemPickaxe
 		super(toolMaterial);
 		setCreativeTab(SeedstoneMod.tabSeedstone);
 		setUnlocalizedName("pickaxeSeedstone");
-		setTextureName("seedstonemod:seedstone_pickaxe");
+		// setTextureName("seedstonemod:seedstone_pickaxe");
 	}
 }

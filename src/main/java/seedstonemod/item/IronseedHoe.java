@@ -8,6 +8,6 @@ public class IronseedHoe extends ItemHoe{
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
         setUnlocalizedName("hoeIronseed");
-        setTextureName("seedstonemod:ironseed_hoe");
+        // setTextureName("seedstonemod:ironseed_hoe");
     }
 }

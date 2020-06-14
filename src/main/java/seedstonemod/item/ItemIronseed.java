@@ -8,6 +8,6 @@ public class ItemIronseed extends Item {
         super();
         setCreativeTab(SeedstoneMod.tabSeedstone);
 		setUnlocalizedName("ironseed");
-		setTextureName("seedstonemod:ironseed_ingot");;
+		// setTextureName("seedstonemod:ironseed_ingot");
     }
 }

@@ -11,7 +11,7 @@ public class ItemBigrottenflesh extends ItemFood{
         setPotionEffect(Potion.hunger.id, 30, 0, 0.9F);
         setCreativeTab(SeedstoneMod.tabSeedstone);
         setUnlocalizedName("bigRottenFlesh");
-        setTextureName("seedstonemod:bigrottenflesh");
+        // setTextureName("seedstonemod:bigrottenflesh");
     }
     
 }

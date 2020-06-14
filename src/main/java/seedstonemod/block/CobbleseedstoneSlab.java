@@ -8,49 +8,40 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyBool;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import seedstonemod.SeedstoneMod;
 
 
 public class CobbleseedstoneSlab extends BlockSlab {
 	
-	private IIcon sideIcon;
-	
 	public CobbleseedstoneSlab(boolean isDouble) {
-		super(isDouble, Material.rock);
+		super(Material.rock);
 		this.useNeighborBrightness = true;
 		this.setStepSound(Block.soundTypeStone);
 		this.setResistance(10.0F);
 		this.setHardness(2.0F);
 		this.setHarvestLevel("pickaxe", 0);
-		this.setCreativeTab(SeedstoneMod.tabSeedstone);
-		this.setBlockName("CobbleseedstoneSlab");
+		
+		// this.setBlockName("CobbleseedstoneSlab");
 		this.setLightLevel(0.0f);
-	}
-	
-	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int side, int meta){
-		if(this.field_150004_a && (meta & 2) != 0){
-			side = 1;
+		// this.setUnlocalizedName("CobbleseedstoneSlab");
+
+		IBlockState blockState = this.blockState.getBaseState();
+		blockState = blockState.withProperty(PropertyBool.create("variant"), false);
+		
+		if(!this.isDouble()){
+			this.setCreativeTab(SeedstoneMod.tabSeedstone);
+			blockState = blockState.withProperty(HALF, EnumBlockHalf.BOTTOM);
 		}
-		return side == 1 ? this.sideIcon : (side == 0 ? this.sideIcon : this.blockIcon);
+		setDefaultState(blockState);
 	}
 	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister icon){
-		this.blockIcon = icon.registerIcon("seedstonemod:cobbleseedstone_block");
-		this.sideIcon = icon.registerIcon("seedstonemod:cobbleseedstone_block");
-	}
-
-
-
-	@Override
 	public Item getItemDropped (int p_149650_1_, Random p_149650_2_, int p_149650_3_){
 		return Item.getItemFromBlock(SeedstoneBlocks.CobbleseedstoneSlabsingle);
 	}
@@ -59,10 +50,17 @@ public class CobbleseedstoneSlab extends BlockSlab {
 		return new ItemStack(SeedstoneBlocks.CobbleseedstoneSlabsingle, 2, 0);
 	}
 
-	@Override
-	public String func_150002_b(int var1){
+	public String getUnlocalizedName(int metadata){
 		return super.getUnlocalizedName();
 	}
+
+	public final Object getVariant(final ItemStack itemStack) {
+        return false;
+	}
+	
+	public final IProperty getVariantProperty() {
+        return PropertyBool.create("variant");
+    }
 
 	
 	//ignore warning
@@ -82,9 +80,13 @@ public class CobbleseedstoneSlab extends BlockSlab {
 		return block == SeedstoneBlocks.CobbleseedstoneSlabsingle;
 	}
 	
-	@Override
 	@SideOnly(Side.CLIENT)
 	public Item getItem(World world, int x, int y, int z){
 		return isBlockSingleSlab(this) ? Item.getItemFromBlock(this) : Item.getItemFromBlock(SeedstoneBlocks.CobbleseedstoneSlabsingle);
+	}
+
+	@Override
+	public boolean isDouble() {
+		return isBlockSingleSlab(this);
 	}
 }

@@ -8,7 +8,7 @@ public class SeedstoneShovel extends ItemSpade{
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
         setUnlocalizedName("shovelSeedstone");
-        setTextureName("seedstonemod:seedstone_shovel");
+        // setTextureName("seedstonemod:seedstone_shovel");
     }
     
 }

@@ -8,7 +8,7 @@ public class SeedstoneSword extends ItemSword{
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
         setUnlocalizedName("swordSeedstone");
-        setTextureName("seedstonemod:seedstone_sword");
+        // setTextureName("seedstonemod:seedstone_sword");
     }
     
 }

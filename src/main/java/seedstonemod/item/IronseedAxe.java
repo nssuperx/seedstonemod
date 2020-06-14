@@ -10,7 +10,7 @@ public class IronseedAxe extends ItemAxe
 		super(toolMaterial);
 		setCreativeTab(SeedstoneMod.tabSeedstone);
 		setUnlocalizedName("axeIronseed");
-		setTextureName("seedstonemod:ironseed_axe");
+		// setTextureName("seedstonemod:ironseed_axe");
 	}
 
 }

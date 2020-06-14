@@ -8,7 +8,7 @@ public class SeedstoneHoe extends ItemHoe{
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
         setUnlocalizedName("hoeSeedstone");
-        setTextureName("seedstonemod:seedstone_hoe");
+        // setTextureName("seedstonemod:seedstone_hoe");
     }
     
 }
