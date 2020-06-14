@@ -33,7 +33,7 @@ public class CobbleseedstoneSlab extends BlockSlab {
 		// this.setUnlocalizedName("CobbleseedstoneSlab");
 
 		IBlockState blockState = this.blockState.getBaseState();
-		blockState = blockState.withProperty(PropertyBool.create("variant"), false);
+		blockState = blockState.withProperty(getVariantProperty(), false);
 		
 		if(!this.isDouble()){
 			this.setCreativeTab(SeedstoneMod.tabSeedstone);
@@ -58,7 +58,7 @@ public class CobbleseedstoneSlab extends BlockSlab {
         return false;
 	}
 	
-	public final IProperty getVariantProperty() {
+	public final IProperty<Boolean> getVariantProperty() {
         return PropertyBool.create("variant");
     }
 
