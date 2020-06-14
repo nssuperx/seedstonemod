@@ -1,6 +1,6 @@
 package seedstonemod.item;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
@@ -46,7 +46,7 @@ public class SeedstoneItems {
 		// ToolMaterial ArmorMaterial
 		SEEDSTONE = EnumHelper.addToolMaterial("SEEDSTONE", 1, 100, 4.0F, 1.0F, 5).setRepairItem(new ItemStack(SeedstoneBlocks.blockCobbleseedstone));
 		IRONSEED = EnumHelper.addToolMaterial("IRONSEED", 2, 450, 6.0F, 2.0F, 14).setRepairItem(new ItemStack(SeedstoneItems.ironseed));
-		IRONSEEDARMOR = EnumHelper.addArmorMaterial("IRONSEEDARMOR", 28, new int[] {2, 6, 5, 2 }, 10 );
+		IRONSEEDARMOR = EnumHelper.addArmorMaterial("IRONSEEDARMOR", null, 28, new int[] { 2, 6, 5, 2 }, 10);
 		IRONSEEDARMOR.customCraftingMaterial = ironseed;
 		
 		// SeedstoneTools

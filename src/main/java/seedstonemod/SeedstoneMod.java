@@ -1,11 +1,11 @@
 package seedstonemod;
 
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Metadata;
-import cpw.mods.fml.common.ModMetadata;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Metadata;
+import net.minecraftforge.fml.common.ModMetadata;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import seedstonemod.item.SeedstoneItems;
 import seedstonemod.block.SeedstoneBlocks;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,6 +16,8 @@ public class SeedstoneMod
 	public static final String MODID = "seedstoneMod";
 	public static final String MODNAME = "SeedstoneMod";
 	public static final String VERSION = "1.5.0";
+	public static final String MOD_DEPENDENCIES = "required-after:Forge@[1.8.9-11.15.1.1722,)";
+	public static final String MOD_ACCEPTED_MC_VERSIONS = "[1.8,1.8.9]";
 
 	@Metadata(MODID)
 	public static ModMetadata meta;
@@ -30,7 +32,7 @@ public class SeedstoneMod
 		ModInfo.loadInfo(meta);
 
 		SeedstoneItems.registerItems();
-		SeedstoneBlocks.registerBlocks();
+		SeedstoneBlocks.registerBlocks(event);
 
 	}
 
