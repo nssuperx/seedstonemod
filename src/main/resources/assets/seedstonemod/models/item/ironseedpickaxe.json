@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "seedstoneMod:items/ironseed_pickaxe"
+        "layer0": "seedstonemod:items/ironseed_pickaxe"
     },
     "display": {
         "thirdperson": {

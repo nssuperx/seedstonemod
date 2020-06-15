@@ -31,6 +31,8 @@ public class CobbleseedstoneSlab extends BlockSlab {
 		this.setResistance(10.0F);
 		this.setHardness(2.0F);
 		this.setHarvestLevel("pickaxe", 0);
+		this.setRegistryName("slabCobbleseedstone");
+		this.setUnlocalizedName("slabCobbleseedstone");
 		
 		// this.setBlockName("CobbleseedstoneSlab");
 		this.setLightLevel(0.0f);

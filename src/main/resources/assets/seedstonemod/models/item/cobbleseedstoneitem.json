@@ -1,5 +1,5 @@
 {
-    "parent": "seedstoneMod:block/cobbleseedstoneblock",
+    "parent": "seedstonemod:block/cobbleseedstoneblock",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

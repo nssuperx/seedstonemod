@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "seedstoneMod:cobbleseedstoneblock" }
+        "normal": { "model": "seedstonemod:cobbleseedstoneblock" }
     }
 }
