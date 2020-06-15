@@ -8,6 +8,7 @@ import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import seedstonemod.item.ItemCobbleseedstoneBlock;
 import seedstonemod.item.ItemCobbleseedstoneSlab;
 
 public class SeedstoneBlocks {
@@ -31,7 +32,7 @@ public class SeedstoneBlocks {
 		CobbleseedstoneSlabdouble = new CobbleseedstoneSlab(true);
 		
 		GameRegistry.registerBlock(blockSeedstone, "blockSeedstone");
-		GameRegistry.registerBlock(blockCobbleseedstone, "blockCobbleseedstone");
+		GameRegistry.registerBlock(blockCobbleseedstone, ItemCobbleseedstoneBlock.class, "blockCobbleseedstone");
 		GameRegistry.registerBlock(stairsCobbleseedstone, "stairsCobbleseedstone");
         GameRegistry.registerBlock(CobbleseedstoneSlabsingle, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabsingle");
 		GameRegistry.registerBlock(CobbleseedstoneSlabdouble, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabdouble");
