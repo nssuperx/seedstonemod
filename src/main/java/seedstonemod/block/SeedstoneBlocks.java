@@ -12,7 +12,7 @@ import seedstonemod.item.ItemCobbleseedstoneSlab;
 
 public class SeedstoneBlocks {
 
-	public static final String MOD_ID = "seedstoneMod";
+	public static final String MOD_ID = "seedstonemod";
 
     public static Block blockSeedstone;
 	public static Block blockCobbleseedstone;
@@ -37,8 +37,8 @@ public class SeedstoneBlocks {
 		GameRegistry.registerBlock(CobbleseedstoneSlabdouble, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabdouble");
 
 		if(event.getSide().isClient()){
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockCobbleseedstone), 0, new ModelResourceLocation(MOD_ID + ":" + "cobbleseedstoneitem", "inventory"));
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockSeedstone), 0, new ModelResourceLocation(MOD_ID + ":" + "seedstoneitem", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockCobbleseedstone), 0, new ModelResourceLocation(MOD_ID + ":" + "cobbleseedstoneblock", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockSeedstone), 0, new ModelResourceLocation(MOD_ID + ":" + "seedstoneblock", "inventory"));
 		}
     }
     

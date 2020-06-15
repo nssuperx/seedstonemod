@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "seedstoneMod:items/steakrottenflesh"
+        "layer0": "seedstonemod:items/steakrottenflesh"
     },
     "display": {
         "thirdperson": {

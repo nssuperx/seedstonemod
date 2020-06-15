@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "seedstoneMod:items/seedstone_axe"
+        "layer0": "seedstonemod:items/seedstone_axe"
     },
     "display": {
         "thirdperson": {

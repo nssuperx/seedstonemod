@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "seedstoneMod:items/ironseed_sword"
+        "layer0": "seedstonemod:items/ironseed_sword"
     },
     "display": {
         "thirdperson": {

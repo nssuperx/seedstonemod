@@ -13,7 +13,7 @@ import seedstonemod.block.SeedstoneBlocks;
 
 public class SeedstoneItems {
 
-	public static final String MOD_ID = "seedstoneMod";
+	public static final String MOD_ID = "seedstonemod";
 
 	public static Item ironseed;
 

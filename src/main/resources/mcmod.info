@@ -1,7 +1,7 @@
 [
 {
-  "modid": "seedstoneMod",
-  "name": "SeedstoneMod",
+  "modid": "seedstonemod",
+  "name": "Seedstonemod",
   "description": "Add new seed items and tools.",
   "version": "${version}",
   "mcversion": "${mcversion}",

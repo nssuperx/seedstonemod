@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures":{
-        "all": "seedstoneMod:blocks/seedstone_block"
+        "all": "seedstonemod:blocks/seedstone_block"
     }
 }
