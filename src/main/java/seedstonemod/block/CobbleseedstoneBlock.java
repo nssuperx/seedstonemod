@@ -5,11 +5,13 @@ import net.minecraft.block.material.Material;
 import seedstonemod.SeedstoneMod;
 
 public class CobbleseedstoneBlock extends Block {
+	private final String blockname = "cobbleseedstoneblock";
+
 	public CobbleseedstoneBlock(Material material)
 	{
 		super(material);
-		this.setRegistryName("blockCobbleseedstone");
-		this.setUnlocalizedName("blockCobbleseedstone");
+		this.setRegistryName(blockname);
+		this.setUnlocalizedName(blockname);
 		// this.setBlockTextureName("seedstonemod:cobbleseedstone_block");
 		this.setCreativeTab(SeedstoneMod.tabSeedstone);
 		this.setHardness(2.0F);

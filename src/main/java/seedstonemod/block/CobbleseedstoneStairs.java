@@ -5,13 +5,15 @@ import net.minecraft.block.BlockStairs;
 import seedstonemod.SeedstoneMod;
 
 public class CobbleseedstoneStairs extends BlockStairs{
+    private final String blockname = "cobbleseedstonestairs";
+
     public CobbleseedstoneStairs(Block block){
         super(block.getStateFromMeta(0));
-        setRegistryName("stairsCobbleseedstone");
-        setUnlocalizedName("stairsCobbleseedstone");
-        setCreativeTab(SeedstoneMod.tabSeedstone);
-        setHarvestLevel("pickaxe", 0);
-        useNeighborBrightness = true;
+        this.setRegistryName(blockname);
+        this.setUnlocalizedName(blockname);
+        this.setCreativeTab(SeedstoneMod.tabSeedstone);
+        this.setHarvestLevel("pickaxe", 0);
+        this.useNeighborBrightness = true;
     }
     
 }

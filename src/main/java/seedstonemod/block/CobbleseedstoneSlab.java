@@ -1,6 +1,5 @@
 package seedstonemod.block;
 
-import java.util.List;
 import java.util.Random;
 
 import net.minecraftforge.fml.relauncher.Side;
@@ -12,7 +11,6 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
@@ -26,13 +24,13 @@ public class CobbleseedstoneSlab extends BlockSlab {
 	
 	public CobbleseedstoneSlab(boolean isDouble) {
 		super(Material.rock);
+		// this.setUnlocalizedName("cobbleseedstoneslab");
 		this.useNeighborBrightness = true;
 		this.setStepSound(Block.soundTypeStone);
 		this.setResistance(10.0F);
 		this.setHardness(2.0F);
 		this.setHarvestLevel("pickaxe", 0);
-		this.setRegistryName("slabCobbleseedstone");
-		this.setUnlocalizedName("slabCobbleseedstone");
+		// this.setRegistryName("slabCobbleseedstone");
 		
 		// this.setBlockName("CobbleseedstoneSlab");
 		this.setLightLevel(0.0f);
