@@ -21,16 +21,17 @@ import seedstonemod.SeedstoneMod;
 public class CobbleseedstoneSlab extends BlockSlab {
 
 	private static final PropertyBool VARIANT = PropertyBool.create("variant");
+	private final String blockname = "cobbleseedstoneslabsingle";
 	
 	public CobbleseedstoneSlab(boolean isDouble) {
 		super(Material.rock);
-		// this.setUnlocalizedName("cobbleseedstoneslab");
+		this.setRegistryName(blockname);
+		this.setUnlocalizedName(blockname);
 		this.useNeighborBrightness = true;
 		this.setStepSound(Block.soundTypeStone);
 		this.setResistance(10.0F);
 		this.setHardness(2.0F);
 		this.setHarvestLevel("pickaxe", 0);
-		// this.setRegistryName("slabCobbleseedstone");
 		
 		// this.setBlockName("CobbleseedstoneSlab");
 		this.setLightLevel(0.0f);
@@ -48,11 +49,11 @@ public class CobbleseedstoneSlab extends BlockSlab {
 	}
 	
 	public Item getItemDropped (IBlockState state, Random rand, int fortune){
-		return Item.getItemFromBlock(SeedstoneBlocks.CobbleseedstoneSlabsingle);
+		return Item.getItemFromBlock(SeedstoneBlocks.cobbleseedstoneSlabsingle);
 	}
 
 	public Item getItem(World worldIn, BlockPos pos){
-        return Item.getItemFromBlock(SeedstoneBlocks.CobbleseedstoneSlabsingle);
+        return Item.getItemFromBlock(SeedstoneBlocks.cobbleseedstoneSlabsingle);
     }
 
 	// protected ItemStack createStactedBlock (int p_149644_1_){
@@ -120,7 +121,7 @@ public class CobbleseedstoneSlab extends BlockSlab {
 	
 	@SideOnly(Side.CLIENT)
 	private static boolean isBlockSingleSlab(Block block){
-		return block == SeedstoneBlocks.CobbleseedstoneSlabsingle;
+		return block == SeedstoneBlocks.cobbleseedstoneSlabsingle;
 	}
 	
 	// @SideOnly(Side.CLIENT)

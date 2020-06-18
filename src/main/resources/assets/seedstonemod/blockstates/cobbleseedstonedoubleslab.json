@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "variant=false": { "model": "seedstonemod:cobbleseedstoneblock" },
+        "variant=true": { "model": "seedstonemod:cobbleseedstoneblock" }
+    }
+}

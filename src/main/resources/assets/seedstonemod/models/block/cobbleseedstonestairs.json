@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+        "textures": {
+            "bottom": "seedstonemod:blocks/cobbleseedstone_block",
+            "top": "seedstonemod:blocks/cobbleseedstone_block",
+            "side": "seedstonemod:blocks/cobbleseedstone_block"
+    }
+}
