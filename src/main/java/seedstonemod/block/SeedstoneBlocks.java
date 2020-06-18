@@ -19,26 +19,28 @@ public class SeedstoneBlocks {
 
     public static Block stairsCobbleseedstone;
 	//slab
-	public static BlockSlab CobbleseedstoneSlabsingle;
-    public static BlockSlab CobbleseedstoneSlabdouble;
+	public static BlockSlab cobbleseedstoneSlabsingle;
+    public static BlockSlab cobbleseedstoneSlabdouble;
     
     public static void registerBlocks(FMLPreInitializationEvent event){
         
         blockSeedstone = new SeedstoneBlock(Material.rock);
 		blockCobbleseedstone = new CobbleseedstoneBlock(Material.rock);
 		stairsCobbleseedstone = new CobbleseedstoneStairs(blockCobbleseedstone);
-		CobbleseedstoneSlabsingle = new CobbleseedstoneSlab(false);
-		CobbleseedstoneSlabdouble = new CobbleseedstoneSlab(true);
+		cobbleseedstoneSlabsingle = new CobbleseedstoneSlab(false);
+		cobbleseedstoneSlabdouble = new CobbleseedstoneSlab(true);
 		
 		GameRegistry.registerBlock(blockSeedstone, "seedstoneblock");
 		GameRegistry.registerBlock(blockCobbleseedstone, "cobbleseedstoneblock");
 		GameRegistry.registerBlock(stairsCobbleseedstone, "cobbleseedstonestairs");
-        GameRegistry.registerBlock(CobbleseedstoneSlabsingle, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabsingle");
-		GameRegistry.registerBlock(CobbleseedstoneSlabdouble, ItemCobbleseedstoneSlab.class, "CobbleseedstoneSlabdouble");
+        GameRegistry.registerBlock(cobbleseedstoneSlabsingle, ItemCobbleseedstoneSlab.class, "cobbleseedstonehalfslab");
+		GameRegistry.registerBlock(cobbleseedstoneSlabdouble, ItemCobbleseedstoneSlab.class, "cobbleseedstonedoubleslab");
 
 		if(event.getSide().isClient()){
 			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockSeedstone), 0, new ModelResourceLocation(blockSeedstone.getRegistryName(), "inventory"));
 			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockCobbleseedstone), 0, new ModelResourceLocation(blockCobbleseedstone.getRegistryName(), "inventory"));
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(stairsCobbleseedstone), 0, new ModelResourceLocation(stairsCobbleseedstone.getRegistryName(), "inventory"));
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cobbleseedstoneSlabsingle), 0, new ModelResourceLocation(cobbleseedstoneSlabsingle.getRegistryName(), "inventory"));
 		}
     }
     

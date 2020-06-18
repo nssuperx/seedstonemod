@@ -149,7 +149,7 @@ public class SeedstoneRecipes
 
 
 		//slab
-		GameRegistry.addRecipe(new ItemStack(SeedstoneBlocks.CobbleseedstoneSlabsingle,6),
+		GameRegistry.addRecipe(new ItemStack(SeedstoneBlocks.cobbleseedstoneSlabsingle,6),
 				"xxx",
 				'x', SeedstoneBlocks.blockCobbleseedstone);
 
