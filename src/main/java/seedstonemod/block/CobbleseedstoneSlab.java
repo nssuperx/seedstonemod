@@ -21,12 +21,9 @@ import seedstonemod.SeedstoneMod;
 public class CobbleseedstoneSlab extends BlockSlab {
 
 	private static final PropertyBool VARIANT = PropertyBool.create("variant");
-	private final String blockname = "cobbleseedstoneslabsingle";
 	
 	public CobbleseedstoneSlab(boolean isDouble) {
 		super(Material.rock);
-		this.setRegistryName(blockname);
-		this.setUnlocalizedName(blockname);
 		this.useNeighborBrightness = true;
 		this.setStepSound(Block.soundTypeStone);
 		this.setResistance(10.0F);
@@ -42,9 +39,9 @@ public class CobbleseedstoneSlab extends BlockSlab {
 		
 		if(!this.isDouble()){
 			blockState = blockState.withProperty(HALF, EnumBlockHalf.BOTTOM);
+			this.setCreativeTab(SeedstoneMod.tabSeedstone);
 		}
 		setDefaultState(blockState);
-		this.setCreativeTab(SeedstoneMod.tabSeedstone);
 
 	}
 	
@@ -131,6 +128,6 @@ public class CobbleseedstoneSlab extends BlockSlab {
 
 	@Override
 	public boolean isDouble() {
-		return isBlockSingleSlab(this);
+		return !isBlockSingleSlab(this);
 	}
 }
