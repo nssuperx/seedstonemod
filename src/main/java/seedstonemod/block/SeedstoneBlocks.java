@@ -27,8 +27,8 @@ public class SeedstoneBlocks {
         blockSeedstone = new SeedstoneBlock(Material.rock);
 		blockCobbleseedstone = new CobbleseedstoneBlock(Material.rock);
 		stairsCobbleseedstone = new CobbleseedstoneStairs(blockCobbleseedstone);
-		cobbleseedstoneSlabsingle = new CobbleseedstoneSlab(false);
-		cobbleseedstoneSlabdouble = new CobbleseedstoneSlab(true);
+		cobbleseedstoneSlabsingle = new CobbleseedstoneHalfSlab();
+		cobbleseedstoneSlabdouble = new CobbleseedstoneDoubleSlab();
 		
 		GameRegistry.registerBlock(blockSeedstone, "seedstoneblock");
 		GameRegistry.registerBlock(blockCobbleseedstone, "cobbleseedstoneblock");
