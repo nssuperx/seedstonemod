@@ -4,6 +4,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
@@ -34,10 +35,10 @@ public class SeedstoneItems {
 	public static Item axeIronseed;
 	public static Item hoeIronseed;
 
-	public static Item helmetironseed;
-	public static Item chestPlateironseed;
-	public static Item leggingsironseed;
-	public static Item bootsironseed;
+	public static ItemArmor helmetironseed;
+	public static ItemArmor chestPlateironseed;
+	public static ItemArmor leggingsironseed;
+	public static ItemArmor bootsironseed;
 
 	public static Item bigRottenFlesh;
     public static Item steakRottenFlesh;
@@ -82,10 +83,10 @@ public class SeedstoneItems {
 		chestPlateironseed = new ItemIronseedArmor(1);
 		leggingsironseed = new ItemIronseedArmor(2);
 		bootsironseed = new ItemIronseedArmor(3);
-		GameRegistry.registerItem(helmetironseed, "helmetIronseed");
-		GameRegistry.registerItem(chestPlateironseed, "chestPlateIronseed");
-		GameRegistry.registerItem(leggingsironseed, "leggingsIronseed");
-		GameRegistry.registerItem(bootsironseed, "bootsIronseed");
+		GameRegistry.registerItem(helmetironseed, "ironseedhelmet");
+		GameRegistry.registerItem(chestPlateironseed, "ironseedchestplate");
+		GameRegistry.registerItem(leggingsironseed, "ironseedleggings");
+		GameRegistry.registerItem(bootsironseed, "ironseedboots");
 
 		// RottenFlesh
 		bigRottenFlesh = new ItemBigrottenflesh();
@@ -108,10 +109,10 @@ public class SeedstoneItems {
             ModelLoader.setCustomModelResourceLocation(axeIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedaxe", "inventory"));
 			ModelLoader.setCustomModelResourceLocation(hoeIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
 			
-			// ModelLoader.setCustomModelResourceLocation(helmetironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
-			// ModelLoader.setCustomModelResourceLocation(chestPlateironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
-			// ModelLoader.setCustomModelResourceLocation(leggingsironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
-			// ModelLoader.setCustomModelResourceLocation(bootsironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhoe", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(helmetironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedhelmet", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(chestPlateironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedchestplate", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(leggingsironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedleggings", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(bootsironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedboots", "inventory"));
 
             ModelLoader.setCustomModelResourceLocation(bigRottenFlesh, 0, new ModelResourceLocation(MOD_ID + ":" + "bigrottenflesh", "inventory"));
             ModelLoader.setCustomModelResourceLocation(steakRottenFlesh, 0, new ModelResourceLocation(MOD_ID + ":" + "steakrottenflesh", "inventory"));
