@@ -4,10 +4,12 @@ import net.minecraft.item.Item;
 import seedstonemod.SeedstoneMod;
 
 public class ItemIronseed extends Item {
+    private final String ingotname = "ironseedingot";
+
     public ItemIronseed(){
         super();
         setCreativeTab(SeedstoneMod.tabSeedstone);
-		setUnlocalizedName("ironseed");
-		// setTextureName("seedstonemod:ironseed_ingot");
+        setRegistryName(ingotname);
+		setUnlocalizedName(ingotname);
     }
 }

@@ -118,24 +118,24 @@ public class SeedstoneRecipes
 
 
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.helmetironseed),
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.helmetIronseed),
 				"xxx",
 				"x x",
 				'x', SeedstoneItems.ironseed);
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.chestPlateironseed),
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.chestplateIronseed),
 				"x x",
 				"xxx",
 				"xxx",
 				'x', SeedstoneItems.ironseed);
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.leggingsironseed),
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.leggingsIronseed),
 				"xxx",
 				"x x",
 				"x x",
 				'x', SeedstoneItems.ironseed);
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.bootsironseed),
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.bootsIronseed),
 				"x x",
 				"x x",
 				'x', SeedstoneItems.ironseed);
