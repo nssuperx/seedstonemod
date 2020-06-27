@@ -37,8 +37,8 @@ public class ItemIronseedArmor extends ItemArmor {
 
 	public String getArmorTexture(ItemStack itemStack, Entity entity, int slot, String type){
 		if (this.armorType == 2){
-			return "seedstonemod:textures/models/armor/ironseed_layer_2.png";
+			return "seedstonemod:textures/models/armor/ironseedarmor_layer_2.png";
 		}
-		return "seedstonemod:textures/models/armor/ironseed_layer_1.png";
+		return "seedstonemod:textures/models/armor/ironseedarmor_layer_1.png";
 	}
 }

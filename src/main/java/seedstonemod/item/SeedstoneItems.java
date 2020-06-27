@@ -51,7 +51,7 @@ public class SeedstoneItems {
 		// ToolMaterial ArmorMaterial
 		SEEDSTONE = EnumHelper.addToolMaterial("SEEDSTONE", 1, 100, 4.0F, 1.0F, 5).setRepairItem(new ItemStack(SeedstoneBlocks.blockCobbleseedstone));
 		IRONSEED = EnumHelper.addToolMaterial("IRONSEED", 2, 450, 6.0F, 2.0F, 14).setRepairItem(new ItemStack(SeedstoneItems.ironseed));
-		IRONSEEDARMOR = EnumHelper.addArmorMaterial("IRONSEEDARMOR", null, 28, new int[] { 2, 6, 5, 2 }, 10);
+		IRONSEEDARMOR = EnumHelper.addArmorMaterial("IRONSEEDARMOR", "ironseedarmor", 28, new int[] { 2, 6, 5, 2 }, 10);
 		IRONSEEDARMOR.customCraftingMaterial = ironseed;
 		
 		// SeedstoneTools
@@ -97,13 +97,13 @@ public class SeedstoneItems {
 		if (event.getSide().isClient()) {
 			ModelLoader.setCustomModelResourceLocation(ironseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedingot", "inventory"));
 
-			ModelLoader.setCustomModelResourceLocation(swordSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstoneaxe", "inventory"));
+			ModelLoader.setCustomModelResourceLocation(swordSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstonesword", "inventory"));
             ModelLoader.setCustomModelResourceLocation(shovelSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstoneshovel", "inventory"));
             ModelLoader.setCustomModelResourceLocation(pickaxeSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstonepickaxe", "inventory"));
             ModelLoader.setCustomModelResourceLocation(axeSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstoneaxe", "inventory"));
 			ModelLoader.setCustomModelResourceLocation(hoeSeedstone, 0, new ModelResourceLocation(MOD_ID + ":" + "seedstonehoe", "inventory"));
 
-            ModelLoader.setCustomModelResourceLocation(swordIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedaxe", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(swordIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedsword", "inventory"));
             ModelLoader.setCustomModelResourceLocation(shovelIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedshovel", "inventory"));
             ModelLoader.setCustomModelResourceLocation(pickaxeIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedpickaxe", "inventory"));
             ModelLoader.setCustomModelResourceLocation(axeIronseed, 0, new ModelResourceLocation(MOD_ID + ":" + "ironseedaxe", "inventory"));
