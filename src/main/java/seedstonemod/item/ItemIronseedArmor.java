@@ -6,32 +6,31 @@ import net.minecraft.item.ItemStack;
 import seedstonemod.SeedstoneMod;
 
 public class ItemIronseedArmor extends ItemArmor {
+	private String armorname;
 
 	public ItemIronseedArmor(int type){
 		super(SeedstoneItems.IRONSEEDARMOR, 0 ,type);
 		switch(type){
 			case 0:
-				setUnlocalizedName("helmetIronseed");
-				// setTextureName("seedstonemod:ironseed_helmet");
+				armorname = "ironseedhelmet";
 				break;
 
 			case 1:
-				setUnlocalizedName("chestPlateIronseed");
-				// setTextureName("seedstonemod:ironseed_chestplate");
+				armorname = "ironseedchestplate";
 				break;
 
 			case 2:
-				setUnlocalizedName("leggingsIronseed");
-				// setTextureName("seedstonemod:ironseed_leggings");
+				armorname = "ironseedleggings";
 				break;
 
 			case 3:
-				setUnlocalizedName("bootsIronseed");
-				// setTextureName("seedstonemod:ironseed_boots");
+				armorname = "ironseedboots";
 				break;
 
 		}
-		this.setCreativeTab(SeedstoneMod.tabSeedstone);
+		setRegistryName(armorname);
+		setUnlocalizedName(armorname);
+		setCreativeTab(SeedstoneMod.tabSeedstone);
 	}
 
 
