@@ -15,9 +15,9 @@ public class SeedstoneRecipes
 				"xxx",
 				"xxx",
 				"xxx",
-				'x', Items.wheat_seeds);
+				'x', Items.WHEAT_SEEDS);
 
-		GameRegistry.addRecipe(new ItemStack(Items.wheat_seeds,9),
+		GameRegistry.addRecipe(new ItemStack(Items.WHEAT_SEEDS, 9),
 				"x",
 				'x', SeedstoneBlocks.blockCobbleseedstone);
 
@@ -28,11 +28,11 @@ public class SeedstoneRecipes
 				'x', SeedstoneBlocks.blockCobbleseedstone);
 
 
-		GameRegistry.addRecipe(new ItemStack(Blocks.grass),
+		GameRegistry.addRecipe(new ItemStack(Blocks.GRASS),
 				"xxx",
 				"yyy",
 				'x', SeedstoneBlocks.blockSeedstone,
-				'y', Blocks.dirt);
+				'y', Blocks.DIRT);
 
 		GameRegistry.addSmelting(SeedstoneBlocks.blockCobbleseedstone, new ItemStack(SeedstoneBlocks.blockSeedstone), 0.1F);
 
@@ -41,80 +41,41 @@ public class SeedstoneRecipes
 				"xyx",
 				"xxx",
 				'x', SeedstoneBlocks.blockSeedstone,
-				'y', Items.iron_ingot);
+				'y', Items.IRON_INGOT);
 
 		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.swordSeedstone),
 				"x",
 				"x",
 				"y",
 				'x', SeedstoneBlocks.blockCobbleseedstone,
-				'y', Items.stick);
+				'y', Items.STICK);
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.shovelSeedstone),
-				"x",
-				"y",
-				"y",
-				'x', SeedstoneBlocks.blockCobbleseedstone,
-				'y', Items.stick);
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.shovelSeedstone), "x", "y", "y", 'x',
+				SeedstoneBlocks.blockCobbleseedstone, 'y', Items.STICK);
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.pickaxeSeedstone),
-				"xxx",
-				" y ",
-				" y ",
-				'x', SeedstoneBlocks.blockCobbleseedstone,
-				'y', Items.stick);
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.pickaxeSeedstone), "xxx", " y ", " y ", 'x',
+				SeedstoneBlocks.blockCobbleseedstone, 'y', Items.STICK);
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.axeSeedstone),
-				" xx",
-				" yx",
-				" y ",
-				'x', SeedstoneBlocks.blockCobbleseedstone,
-				'y', Items.stick);
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.axeSeedstone), " xx", " yx", " y ", 'x',
+				SeedstoneBlocks.blockCobbleseedstone, 'y', Items.STICK);
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.hoeSeedstone),
-				" xx",
-				" y ",
-				" y ",
-				'x', SeedstoneBlocks.blockCobbleseedstone,
-				'y', Items.stick);
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.hoeSeedstone), " xx", " y ", " y ", 'x',
+				SeedstoneBlocks.blockCobbleseedstone, 'y', Items.STICK);
 
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.swordIronseed), "x", "x", "y", 'x', SeedstoneItems.ironseed,
+				'y', Items.STICK);
 
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.shovelIronseed), "x", "y", "y", 'x',
+				SeedstoneItems.ironseed, 'y', Items.STICK);
 
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.pickaxeIronseed), "xxx", " y ", " y ", 'x',
+				SeedstoneItems.ironseed, 'y', Items.STICK);
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.swordIronseed),
-				"x",
-				"x",
-				"y",
-				'x', SeedstoneItems.ironseed,
-				'y', Items.stick);
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.axeIronseed), " xx", " yx", " y ", 'x',
+				SeedstoneItems.ironseed, 'y', Items.STICK);
 
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.shovelIronseed),
-				"x",
-				"y",
-				"y",
-				'x', SeedstoneItems.ironseed,
-				'y', Items.stick);
-
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.pickaxeIronseed),
-				"xxx",
-				" y ",
-				" y ",
-				'x', SeedstoneItems.ironseed,
-				'y', Items.stick);
-
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.axeIronseed),
-				" xx",
-				" yx",
-				" y ",
-				'x', SeedstoneItems.ironseed,
-				'y', Items.stick);
-
-		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.hoeIronseed),
-				" xx",
-				" y ",
-				" y ",
-				'x', SeedstoneItems.ironseed,
-				'y', Items.stick);
+		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.hoeIronseed), " xx", " y ", " y ", 'x',
+				SeedstoneItems.ironseed, 'y', Items.STICK);
 
 
 
@@ -143,7 +104,7 @@ public class SeedstoneRecipes
 		GameRegistry.addRecipe(new ItemStack(SeedstoneItems.bigRottenFlesh),
 				"xx",
 				"xx",
-				'x', Items.rotten_flesh);
+				'x', Items.ROTTEN_FLESH);
 
 		GameRegistry.addSmelting(SeedstoneItems.bigRottenFlesh, new ItemStack(SeedstoneItems.steakRottenFlesh), 0.8F);
 

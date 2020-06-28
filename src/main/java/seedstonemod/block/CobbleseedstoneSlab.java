@@ -6,14 +6,15 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import seedstonemod.SeedstoneMod;
 
@@ -23,9 +24,9 @@ public class CobbleseedstoneSlab extends BlockSlab {
 	private static final PropertyBool VARIANT = PropertyBool.create("variant");
 	
 	public CobbleseedstoneSlab(boolean isDouble) {
-		super(Material.rock);
+		super(Material.ROCK);
 		this.useNeighborBrightness = true;
-		this.setStepSound(Block.soundTypeStone);
+		this.setSoundType(SoundType.STONE);
 		this.setResistance(10.0F);
 		this.setHardness(2.0F);
 		this.setHarvestLevel("pickaxe", 0);
@@ -95,11 +96,11 @@ public class CobbleseedstoneSlab extends BlockSlab {
         }
     }
 	
-	protected final BlockState createBlockState() {
+	protected final BlockStateContainer createBlockState() {
         if (this.isDouble()) {
-            return new BlockState(this, new IProperty[] {VARIANT});
+            return new BlockStateContainer(this, new IProperty[] {VARIANT});
         } else {
-            return new BlockState(this, new IProperty[] {VARIANT, HALF});
+            return new BlockStateContainer(this, new IProperty[] {VARIANT, HALF});
         }
     }
 
@@ -129,5 +130,10 @@ public class CobbleseedstoneSlab extends BlockSlab {
 	@Override
 	public boolean isDouble() {
 		return !isBlockSingleSlab(this);
+	}
+
+	@Override
+	public Comparable<?> getTypeForItem(ItemStack stack) {
+		return null;
 	}
 }

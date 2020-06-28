@@ -16,8 +16,8 @@ public class SeedstoneMod
 	public static final String MOD_ID = "seedstoneMod";
 	public static final String MOD_NAME = "SeedstoneMod";
 	public static final String VERSION = "1.6.0";
-	public static final String MOD_DEPENDENCIES = "required-after:Forge@[1.8.9-11.15.1.1722,)";
-	public static final String MOD_ACCEPTED_MC_VERSIONS = "[1.8,1.8.9]";
+	public static final String MOD_DEPENDENCIES = "required-after:Forge@[1.9.4-12.17.0.1976,)";
+	public static final String MOD_ACCEPTED_MC_VERSIONS = "[1.9.4]";
 
 	@Metadata(MOD_ID)
 	public static ModMetadata meta;

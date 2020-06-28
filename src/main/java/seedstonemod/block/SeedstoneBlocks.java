@@ -6,9 +6,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import seedstonemod.item.ItemCobbleseedstoneSlab;
+import net.minecraft.util.ResourceLocation;
 
 public class SeedstoneBlocks {
 
@@ -24,17 +24,17 @@ public class SeedstoneBlocks {
     
     public static void registerBlocks(FMLPreInitializationEvent event){
         
-        blockSeedstone = new SeedstoneBlock(Material.rock);
-		blockCobbleseedstone = new CobbleseedstoneBlock(Material.rock);
+        blockSeedstone = new SeedstoneBlock(Material.ROCK);
+		blockCobbleseedstone = new CobbleseedstoneBlock(Material.ROCK);
 		stairsCobbleseedstone = new CobbleseedstoneStairs(blockCobbleseedstone);
 		cobbleseedstoneSlabsingle = new CobbleseedstoneHalfSlab();
 		cobbleseedstoneSlabdouble = new CobbleseedstoneDoubleSlab();
 		
-		GameRegistry.registerBlock(blockSeedstone, "seedstoneblock");
-		GameRegistry.registerBlock(blockCobbleseedstone, "cobbleseedstoneblock");
-		GameRegistry.registerBlock(stairsCobbleseedstone, "cobbleseedstonestairs");
-        GameRegistry.registerBlock(cobbleseedstoneSlabsingle, ItemCobbleseedstoneSlab.class, "cobbleseedstonehalfslab");
-		GameRegistry.registerBlock(cobbleseedstoneSlabdouble, ItemCobbleseedstoneSlab.class, "cobbleseedstonedoubleslab");
+		GameRegistry.register(blockSeedstone, new ResourceLocation(MOD_ID, "seedstoneblock"));
+		GameRegistry.register(blockCobbleseedstone, new ResourceLocation(MOD_ID, "cobbleseedstoneblock"));
+		GameRegistry.register(stairsCobbleseedstone, new ResourceLocation(MOD_ID, "cobbleseedstonestairs"));
+        GameRegistry.register(cobbleseedstoneSlabsingle, new ResourceLocation(MOD_ID, "cobbleseedstonehalfslab"));
+		GameRegistry.register(cobbleseedstoneSlabdouble, new ResourceLocation(MOD_ID, "cobbleseedstonedoubleslab"));
 
 		if(event.getSide().isClient()){
 			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockSeedstone), 0, new ModelResourceLocation(blockSeedstone.getRegistryName(), "inventory"));
