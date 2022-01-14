@@ -1,8 +1,8 @@
 {
     "parent": "block/inner_stairs",
-        "textures": {
-            "bottom": "seedstonemod:blocks/cobbleseedstone_block",
-            "top": "seedstonemod:blocks/cobbleseedstone_block",
-            "side": "seedstonemod:blocks/cobbleseedstone_block"
+    "textures": {
+        "bottom": "seedstonemod:blocks/cobbleseedstone_block",
+        "top": "seedstonemod:blocks/cobbleseedstone_block",
+        "side": "seedstonemod:blocks/cobbleseedstone_block"
     }
 }

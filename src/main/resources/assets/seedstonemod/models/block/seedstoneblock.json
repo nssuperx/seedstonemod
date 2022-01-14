@@ -1,5 +1,5 @@
 {
-    "parent": "block/cube_all",
+    "parent": "block/block",
     "textures":{
         "all": "seedstonemod:blocks/seedstone_block"
     }
