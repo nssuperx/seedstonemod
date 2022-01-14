@@ -9,7 +9,7 @@ public class ItemIronseed extends Item {
     public ItemIronseed(){
         super();
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        setRegistryName(ingotname);
+        // setRegistryName(ingotname);
 		setUnlocalizedName(ingotname);
     }
 }

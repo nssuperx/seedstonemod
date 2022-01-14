@@ -48,7 +48,6 @@ public class SeedstoneItems {
     public static void registerItems(FMLPreInitializationEvent event){
 		// Ironseed
 		ironseed = new ItemIronseed();
-		// new ResourceLocation(MOD_ID, "ironseedingot")
 		GameRegistry.register(ironseed, new ResourceLocation(MOD_ID, "ironseedingot"));
 		
 		// ToolMaterial ArmorMaterial

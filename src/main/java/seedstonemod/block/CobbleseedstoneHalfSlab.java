@@ -5,7 +5,7 @@ public class CobbleseedstoneHalfSlab extends CobbleseedstoneSlab {
 
     public CobbleseedstoneHalfSlab(){
         super(false);
-        this.setRegistryName(blockname);
+        // this.setRegistryName(blockname);
 		this.setUnlocalizedName(blockname);
     }
 

@@ -9,7 +9,7 @@ public class SeedstoneShovel extends ItemSpade{
     public SeedstoneShovel(ToolMaterial toolMaterial){
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        setRegistryName(toolname);
+        // setRegistryName(toolname);
 		setUnlocalizedName(toolname);
     }
     

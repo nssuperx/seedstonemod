@@ -9,7 +9,7 @@ public class IronseedHoe extends ItemHoe{
     public IronseedHoe(ToolMaterial toolMaterial){
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        setRegistryName(toolname);
+        // setRegistryName(toolname);
 		setUnlocalizedName(toolname);
     }
 }

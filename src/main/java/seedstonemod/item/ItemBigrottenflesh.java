@@ -13,7 +13,7 @@ public class ItemBigrottenflesh extends ItemFood{
         super(8, 1.6F, true);
         setPotionEffect(new PotionEffect(MobEffects.HUNGER, 30, 0), 0.9F);
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        setRegistryName(itemname);
+        // setRegistryName(itemname);
         setUnlocalizedName(itemname);
     }
     

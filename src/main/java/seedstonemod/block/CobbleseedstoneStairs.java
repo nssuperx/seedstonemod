@@ -8,8 +8,8 @@ public class CobbleseedstoneStairs extends BlockStairs{
     private final String blockname = "cobbleseedstonestairs";
 
     public CobbleseedstoneStairs(Block block){
-        super(block.getStateFromMeta(0));
-        this.setRegistryName(blockname);
+        super(block.getDefaultState());
+        // this.setRegistryName(blockname);
         this.setUnlocalizedName(blockname);
         this.setCreativeTab(SeedstoneMod.tabSeedstone);
         this.setHarvestLevel("pickaxe", 0);

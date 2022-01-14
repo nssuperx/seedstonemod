@@ -9,7 +9,7 @@ public class IronseedSword extends ItemSword{
     public IronseedSword(ToolMaterial toolMaterial){
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        setRegistryName(toolname);
+        // setRegistryName(toolname);
 		setUnlocalizedName(toolname);
     }
 }

@@ -8,6 +8,7 @@ import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 
 public class SeedstoneBlocks {
@@ -29,18 +30,24 @@ public class SeedstoneBlocks {
 		stairsCobbleseedstone = new CobbleseedstoneStairs(blockCobbleseedstone);
 		cobbleseedstoneSlabsingle = new CobbleseedstoneHalfSlab();
 		cobbleseedstoneSlabdouble = new CobbleseedstoneDoubleSlab();
-		
-		GameRegistry.register(blockSeedstone, new ResourceLocation(MOD_ID, "seedstoneblock"));
-		GameRegistry.register(blockCobbleseedstone, new ResourceLocation(MOD_ID, "cobbleseedstoneblock"));
-		GameRegistry.register(stairsCobbleseedstone, new ResourceLocation(MOD_ID, "cobbleseedstonestairs"));
-        GameRegistry.register(cobbleseedstoneSlabsingle, new ResourceLocation(MOD_ID, "cobbleseedstonehalfslab"));
-		GameRegistry.register(cobbleseedstoneSlabdouble, new ResourceLocation(MOD_ID, "cobbleseedstonedoubleslab"));
+
+		ResourceLocation blockSeedstoneRL = new ResourceLocation(MOD_ID, "seedstoneblock");
+		ResourceLocation blockCobbleseedstoneRL = new ResourceLocation(MOD_ID, "cobbleseedstoneblock");
+		ResourceLocation stairsCobbleseedstoneRL = new ResourceLocation(MOD_ID, "cobbleseedstonestairs");
+		ResourceLocation cobbleseedstoneSlabsingleRL = new ResourceLocation(MOD_ID, "cobbleseedstonehalfslab");
+		ResourceLocation cobbleseedstoneSlabdoubleRL = new ResourceLocation(MOD_ID, "cobbleseedstonedoubleslab");
+
+		GameRegistry.register(blockSeedstone, blockSeedstoneRL);
+		GameRegistry.register(blockCobbleseedstone, blockCobbleseedstoneRL);
+		GameRegistry.register(stairsCobbleseedstone, stairsCobbleseedstoneRL);
+        GameRegistry.register(cobbleseedstoneSlabsingle, cobbleseedstoneSlabsingleRL);
+		GameRegistry.register(cobbleseedstoneSlabdouble, cobbleseedstoneSlabdoubleRL);
 
 		if(event.getSide().isClient()){
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockSeedstone), 0, new ModelResourceLocation(blockSeedstone.getRegistryName(), "inventory"));
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockCobbleseedstone), 0, new ModelResourceLocation(blockCobbleseedstone.getRegistryName(), "inventory"));
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(stairsCobbleseedstone), 0, new ModelResourceLocation(stairsCobbleseedstone.getRegistryName(), "inventory"));
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cobbleseedstoneSlabsingle), 0, new ModelResourceLocation(cobbleseedstoneSlabsingle.getRegistryName(), "inventory"));
+			ModelLoader.setCustomModelResourceLocation(new ItemBlock(blockSeedstone), 0, new ModelResourceLocation(blockSeedstoneRL, "inventory"));
+			ModelLoader.setCustomModelResourceLocation(new ItemBlock(blockCobbleseedstone), 0, new ModelResourceLocation(blockCobbleseedstoneRL, "inventory"));
+			ModelLoader.setCustomModelResourceLocation(new ItemBlock(stairsCobbleseedstone), 0, new ModelResourceLocation(stairsCobbleseedstoneRL, "inventory"));
+			ModelLoader.setCustomModelResourceLocation(new ItemBlock(cobbleseedstoneSlabsingle), 0, new ModelResourceLocation(cobbleseedstoneSlabsingleRL, "inventory"));
 		}
     }
     

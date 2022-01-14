@@ -1,9 +1,7 @@
 package seedstonemod.item;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
 import seedstonemod.SeedstoneMod;
 
 public class ItemIronseedArmor extends ItemArmor {
@@ -31,7 +29,7 @@ public class ItemIronseedArmor extends ItemArmor {
 				break;
 
 		}
-		setRegistryName(armorname);
+		// setRegistryName(armorname);
 		setUnlocalizedName(armorname);
 		setCreativeTab(SeedstoneMod.tabSeedstone);
 	}

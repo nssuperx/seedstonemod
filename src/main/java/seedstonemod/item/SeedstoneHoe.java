@@ -9,7 +9,7 @@ public class SeedstoneHoe extends ItemHoe{
     public SeedstoneHoe(ToolMaterial toolMaterial){
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        setRegistryName(toolname);
+        // setRegistryName(toolname);
 		setUnlocalizedName(toolname);
     }
     

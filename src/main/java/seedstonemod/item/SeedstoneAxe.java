@@ -7,9 +7,9 @@ public class SeedstoneAxe extends ItemAxe{
 	private final String toolname = "seedstoneaxe";
 
 	public SeedstoneAxe(ToolMaterial toolMaterial){
-		super(toolMaterial);
+		super(toolMaterial, toolMaterial.getDamageVsEntity(), toolMaterial.getEfficiencyOnProperMaterial());
 		setCreativeTab(SeedstoneMod.tabSeedstone);
-		setRegistryName(toolname);
+		// setRegistryName(toolname);
 		setUnlocalizedName(toolname);
 	}
 

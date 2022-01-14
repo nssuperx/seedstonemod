@@ -9,7 +9,7 @@ public class IronseedPickaxe extends ItemPickaxe{
 	public IronseedPickaxe(ToolMaterial toolMaterial){
 		super(toolMaterial);
 		setCreativeTab(SeedstoneMod.tabSeedstone);
-		setRegistryName(toolname);
+		// setRegistryName(toolname);
 		setUnlocalizedName(toolname);
 	}
 }

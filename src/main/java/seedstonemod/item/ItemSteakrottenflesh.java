@@ -13,7 +13,7 @@ public class ItemSteakrottenflesh extends ItemFood{
         super(4, 1.6F, true);
         setPotionEffect(new PotionEffect(MobEffects.HUNGER, 30, 0), 0.05F);
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        setRegistryName(itemname);
+        // setRegistryName(itemname);
         setUnlocalizedName(itemname);
     }
     

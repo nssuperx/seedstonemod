@@ -9,7 +9,7 @@ public class SeedstonePickaxe extends ItemPickaxe{
 	public SeedstonePickaxe(ToolMaterial toolMaterial){
 		super(toolMaterial);
 		setCreativeTab(SeedstoneMod.tabSeedstone);
-		setRegistryName(toolname);
+		// setRegistryName(toolname);
 		setUnlocalizedName(toolname);
 	}
 }
