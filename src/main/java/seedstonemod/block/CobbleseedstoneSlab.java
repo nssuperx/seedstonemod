@@ -1,5 +1,6 @@
 package seedstonemod.block;
 
+import java.util.List;
 import java.util.Random;
 
 import net.minecraftforge.fml.relauncher.Side;
@@ -12,6 +13,7 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -36,7 +38,7 @@ public class CobbleseedstoneSlab extends BlockSlab {
 		// this.setUnlocalizedName("CobbleseedstoneSlab");
 
 		IBlockState blockState = this.blockState.getBaseState();
-		blockState = blockState.withProperty(getVariantProperty(), false);
+		blockState = blockState.withProperty(VARIANT, false);
 		
 		if(!this.isDouble()){
 			blockState = blockState.withProperty(HALF, EnumBlockHalf.BOTTOM);
@@ -54,9 +56,9 @@ public class CobbleseedstoneSlab extends BlockSlab {
         return Item.getItemFromBlock(SeedstoneBlocks.cobbleseedstoneSlabsingle);
     }
 
-	// protected ItemStack createStactedBlock (int p_149644_1_){
-	// 	return new ItemStack(SeedstoneBlocks.CobbleseedstoneSlabsingle, 2, 0);
-	// }
+	protected ItemStack createStactedBlock (int not_use){
+		return new ItemStack(SeedstoneBlocks.cobbleseedstoneSlabsingle, 2, 0);
+	}
 
 	public String getUnlocalizedName(int metadata){
 		return super.getUnlocalizedName();
@@ -104,17 +106,14 @@ public class CobbleseedstoneSlab extends BlockSlab {
         }
     }
 
-	
-	//ignore warning
-	// @SuppressWarnings({ "rawtypes", "unchecked" })
-	// @Override
-	// @SideOnly(Side.CLIENT)
-	// public void getSubBlocks(Item item, CreativeTabs tab, List list){
-	// 	if(item != Item.getItemFromBlock(SeedstoneBlocks.CobbleseedstoneSlabdouble))
-	// 	{
-	// 		list.add(new ItemStack(item, 1, 0));
-	// 	}
-	// }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(Item item, CreativeTabs tab, List<ItemStack> list){
+		if(item != Item.getItemFromBlock(SeedstoneBlocks.cobbleseedstoneSlabdouble))
+		{
+			list.add(new ItemStack(item, 1, 0));
+		}
+	}
 	
 	
 	@SideOnly(Side.CLIENT)
@@ -124,7 +123,7 @@ public class CobbleseedstoneSlab extends BlockSlab {
 	
 	// @SideOnly(Side.CLIENT)
 	// public Item getItem(World world, int x, int y, int z){
-	// 	return isBlockSingleSlab(this) ? Item.getItemFromBlock(this) : Item.getItemFromBlock(SeedstoneBlocks.CobbleseedstoneSlabsingle);
+	// 	return isBlockSingleSlab(this) ? Item.getItemFromBlock(this) : Item.getItemFromBlock(SeedstoneBlocks.cobbleseedstoneSlabsingle);
 	// }
 
 	@Override
