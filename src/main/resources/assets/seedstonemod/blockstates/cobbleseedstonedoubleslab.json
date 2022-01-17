@@ -1,7 +1,7 @@
 {
     "variants": {
-        "variant=false": { "model": "seedstonemod:cobbleseedstoneblock" },
-        "variant=true": { "model": "seedstonemod:cobbleseedstoneblock" },
-        "inventory": { "model": "seedstonemod:cobbleseedstoneblock" }
+        "normal": { "model": "seedstonemod:cobbleseedstoneblock" },
+        "half=top": { "model": "seedstonemod:cobbleseedstoneblock" },
+        "half=bottom": { "model": "seedstonemod:cobbleseedstoneblock" }
     }
 }

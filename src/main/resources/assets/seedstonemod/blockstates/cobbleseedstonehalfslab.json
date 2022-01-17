@@ -1,8 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=false": { "model": "seedstonemod:cobbleseedstonehalfslab" },
-        "half=top,variant=false": { "model": "seedstonemod:cobbleseedstoneupperslab" },
-        "half=bottom,variant=true": { "model": "seedstonemod:cobbleseedstonehalfslab" },
-        "half=top,variant=true": { "model": "seedstonemod:cobbleseedstonehalfslab" }
+        "half=bottom": { "model": "seedstonemod:cobbleseedstonehalfslab" },
+        "half=top": { "model": "seedstonemod:cobbleseedstoneupperslab" }
     }
 }

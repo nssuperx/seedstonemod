@@ -5,10 +5,10 @@ import net.minecraft.item.ItemFood;
 import net.minecraft.potion.PotionEffect;
 import seedstonemod.SeedstoneMod;
 
-public class ItemSteakrottenflesh extends ItemFood{
-	private final String itemname = "steakrottenflesh";
+public class ItemSteakrottenflesh extends ItemFood {
+    private final String itemname = "steakrottenflesh";
 
-    public ItemSteakrottenflesh(){
+    public ItemSteakrottenflesh() {
         // args: int healAmount, float saturationModifier, Boolean isWolfsFavoriteMeat
         super(4, 1.6F, true);
         setPotionEffect(new PotionEffect(MobEffects.HUNGER, 30, 0), 0.05F);
@@ -16,5 +16,5 @@ public class ItemSteakrottenflesh extends ItemFood{
         // setRegistryName(itemname);
         setUnlocalizedName(itemname);
     }
-    
+
 }

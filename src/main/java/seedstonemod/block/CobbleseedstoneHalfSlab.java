@@ -1,12 +1,12 @@
 package seedstonemod.block;
 
 public class CobbleseedstoneHalfSlab extends CobbleseedstoneSlab {
-	private final String blockname = "cobbleseedstonehalfslab";
+    private final String blockname = "cobbleseedstonehalfslab";
 
-    public CobbleseedstoneHalfSlab(){
+    public CobbleseedstoneHalfSlab() {
         super(false);
         // this.setRegistryName(blockname);
-		this.setUnlocalizedName(blockname);
+        this.setUnlocalizedName(blockname);
     }
 
     public final boolean isDouble() {
