@@ -1,9 +1,23 @@
-/*
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
 
-!.gitgnote
-!LICENSE
-!README.md
-!build.gradle
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
 
-#source files
-!src/
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+.vscode

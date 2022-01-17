@@ -22,15 +22,8 @@ group= "seedstonemod" // http://maven.apache.org/guides/mini/guide-naming-conven
 archivesBaseName = "SeedstoneMod-1.7.10"
 
 minecraft {
-    version = "1.7.10-10.13.4.1558-1.7.10"
-    runDir = "game"
-}
-
-runClient {
-    jvmArgs "-Xmx1024m", "-Xms1024m"
-    if (project.hasProperty("appArgs")) {
-        args Eval.me(appArgs)
-    }
+    version = "1.7.10-10.13.4.1614-1.7.10"
+    runDir = "run"
 }
 
 dependencies {
