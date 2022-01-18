@@ -7,7 +7,7 @@ import seedstonemod.block.SeedstoneBlocks;
 public class ItemCobbleseedstoneSlab extends ItemSlab {
 
     public ItemCobbleseedstoneSlab(Block block) {
-        super(block, SeedstoneBlocks.cobbleseedstoneSlabsingle, SeedstoneBlocks.cobbleseedstoneSlabdouble);
+        super(block, SeedstoneBlocks.BLOCKS.cobbleseedstoneSlabsingle, SeedstoneBlocks.BLOCKS.cobbleseedstoneSlabdouble);
         this.setUnlocalizedName("cobbleseedstoneslab");
     }
 

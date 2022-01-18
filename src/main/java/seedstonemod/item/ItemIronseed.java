@@ -1,15 +1,15 @@
 package seedstonemod.item;
 
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import seedstonemod.SeedstoneMod;
 
 public class ItemIronseed extends Item {
-    private final String ingotname = "ironseedingot";
 
-    public ItemIronseed() {
+    public ItemIronseed(ResourceLocation rl) {
         super();
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        // setRegistryName(ingotname);
-        setUnlocalizedName(ingotname);
+        setRegistryName(rl);
+        setUnlocalizedName(rl.getResourcePath());
     }
 }

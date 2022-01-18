@@ -2,6 +2,7 @@ package seedstonemod.item;
 
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -10,116 +11,102 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.event.RegistryEvent;
+import seedstonemod.SeedstoneMod;
 import seedstonemod.block.SeedstoneBlocks;
 
 public class SeedstoneItems {
+    public static final String MOD_ID = SeedstoneMod.MOD_ID;
 
-    public static final String MOD_ID = "seedstonemod";
+    @ObjectHolder(MOD_ID)
+    public static class ITEMS {
+        public static final Item ironseed = null;
 
-    public static Item ironseed;
+        public static final ToolMaterial SEEDSTONE = null;
+        public static final ToolMaterial IRONSEED = null;
 
-    public static ToolMaterial SEEDSTONE;
-    public static ToolMaterial IRONSEED;
+        public static final ArmorMaterial IRONSEEDARMOR = null;
 
-    public static ArmorMaterial IRONSEEDARMOR;
+        public static final Item swordSeedstone = null;
+        public static final Item shovelSeedstone = null;
+        public static final Item pickaxeSeedstone = null;
+        public static final Item axeSeedstone = null;
+        public static final Item hoeSeedstone = null ;
 
-    public static Item swordSeedstone;
-    public static Item shovelSeedstone;
-    public static Item pickaxeSeedstone;
-    public static Item axeSeedstone;
-    public static Item hoeSeedstone;
+        public static final Item swordIronseed = null;
+        public static final Item shovelIronseed = null;
+        public static final Item pickaxeIronseed = null;
+        public static final Item axeIronseed = null;
+        public static final Item hoeIronseed = null;
 
-    public static Item swordIronseed;
-    public static Item shovelIronseed;
-    public static Item pickaxeIronseed;
-    public static Item axeIronseed;
-    public static Item hoeIronseed;
+        public static final ItemArmor helmetIronseed = null;
+        public static final ItemArmor chestplateIronseed = null;
+        public static final ItemArmor leggingsIronseed = null;
+        public static final ItemArmor bootsIronseed = null;
 
-    public static ItemArmor helmetIronseed;
-    public static ItemArmor chestplateIronseed;
-    public static ItemArmor leggingsIronseed;
-    public static ItemArmor bootsIronseed;
-
-    public static Item bigRottenFlesh;
-    public static Item steakRottenFlesh;
+        public static final Item bigRottenFlesh = null;
+        public static final Item steakRottenFlesh = null;
+    }
     
-    public static void registerItems(FMLPreInitializationEvent event){
+    public static void registerItems(RegistryEvent.Register<Item> event){
         // Ironseed
-        ironseed = new ItemIronseed();
-        GameRegistry.register(ironseed, new ResourceLocation(MOD_ID, "ironseedingot"));
+        event.getRegistry().register(new ItemIronseed(new ResourceLocation(MOD_ID, "ironseedingot")));
         
         // ToolMaterial ArmorMaterial
-        SEEDSTONE = EnumHelper.addToolMaterial("SEEDSTONE", 1, 100, 4.0F, 1.0F, 5).setRepairItem(new ItemStack(SeedstoneBlocks.blockCobbleseedstone));
-        IRONSEED = EnumHelper.addToolMaterial("IRONSEED", 2, 450, 6.0F, 2.0F, 14).setRepairItem(new ItemStack(SeedstoneItems.ironseed));
-        IRONSEEDARMOR = EnumHelper.addArmorMaterial("IRONSEEDARMOR", "ironseedarmor", 28, new int[] { 2, 6, 5, 2 }, 10, null, 0);
-        IRONSEEDARMOR.customCraftingMaterial = ironseed;
+        ToolMaterial SEEDSTONE = EnumHelper.addToolMaterial("SEEDSTONE", 1, 100, 4.0F, 1.0F, 5).setRepairItem(new ItemStack(SeedstoneBlocks.blockCobbleseedstone));
+        ToolMaterial IRONSEED = EnumHelper.addToolMaterial("IRONSEED", 2, 450, 6.0F, 2.0F, 14).setRepairItem(new ItemStack(ITEMS.ironseed));
+        ArmorMaterial IRONSEEDARMOR = EnumHelper.addArmorMaterial("IRONSEEDARMOR", "ironseedarmor", 28, new int[] { 2, 6, 5, 2 }, 10, null, 0);
         
         // SeedstoneTools
-        swordSeedstone = new SeedstoneSword(SEEDSTONE);
-        shovelSeedstone = new SeedstoneShovel(SEEDSTONE);
-        pickaxeSeedstone = new SeedstonePickaxe(SEEDSTONE);
-        axeSeedstone = new SeedstoneAxe(SEEDSTONE);
-        hoeSeedstone = new SeedstoneHoe(SEEDSTONE);
-        GameRegistry.register(swordSeedstone, new ResourceLocation(MOD_ID, "seedstonesword"));
-        GameRegistry.register(shovelSeedstone, new ResourceLocation(MOD_ID, "seedstoneshovel"));
-        GameRegistry.register(pickaxeSeedstone, new ResourceLocation(MOD_ID, "seedstonepickaxe"));
-        GameRegistry.register(axeSeedstone, new ResourceLocation(MOD_ID, "seedstoneaxe"));
-        GameRegistry.register(hoeSeedstone, new ResourceLocation(MOD_ID, "seedstonehoe"));
+        event.getRegistry().register(new SeedstoneSword(new ResourceLocation(MOD_ID, "seedstonesword"), SEEDSTONE));
+        event.getRegistry().register(new SeedstoneShovel(new ResourceLocation(MOD_ID, "seedstoneshovel"), SEEDSTONE));
+        event.getRegistry().register(new SeedstonePickaxe(new ResourceLocation(MOD_ID, "seedstonepickaxe"), SEEDSTONE));
+        event.getRegistry().register(new SeedstoneAxe(new ResourceLocation(MOD_ID, "seedstoneaxe"), SEEDSTONE));
+        event.getRegistry().register(new SeedstoneHoe(new ResourceLocation(MOD_ID, "seedstonehoe"), SEEDSTONE));
 
         // IronseedTools
-        swordIronseed = new IronseedSword(IRONSEED);
-        shovelIronseed = new IronseedShovel(IRONSEED);
-        pickaxeIronseed = new IronseedPickaxe(IRONSEED);
-        axeIronseed = new IronseedAxe(IRONSEED);
-        hoeIronseed = new IronseedHoe(IRONSEED);
-        GameRegistry.register(swordIronseed, new ResourceLocation(MOD_ID, "ironseedsword"));
-        GameRegistry.register(shovelIronseed, new ResourceLocation(MOD_ID, "ironseedshovel"));
-        GameRegistry.register(pickaxeIronseed, new ResourceLocation(MOD_ID, "ironseedpickaxe"));
-        GameRegistry.register(axeIronseed, new ResourceLocation(MOD_ID, "ironseedaxe"));
-        GameRegistry.register(hoeIronseed, new ResourceLocation(MOD_ID, "ironseedhoe"));
+        event.getRegistry().register(new IronseedSword(new ResourceLocation(MOD_ID, "ironseedsword"), IRONSEED));
+        event.getRegistry().register(new IronseedShovel(new ResourceLocation(MOD_ID, "ironseedshovel"), IRONSEED));
+        event.getRegistry().register(new IronseedPickaxe(new ResourceLocation(MOD_ID, "ironseedpickaxe"), IRONSEED));
+        event.getRegistry().register(new IronseedAxe(new ResourceLocation(MOD_ID, "ironseedaxe"), IRONSEED));
+        event.getRegistry().register(new IronseedHoe(new ResourceLocation(MOD_ID, "ironseedhoe"), IRONSEED));
 
         // IronseedArmor
-        helmetIronseed = new ItemIronseedArmor(EntityEquipmentSlot.HEAD);
-        chestplateIronseed = new ItemIronseedArmor(EntityEquipmentSlot.CHEST);
-        leggingsIronseed = new ItemIronseedArmor(EntityEquipmentSlot.LEGS);
-        bootsIronseed = new ItemIronseedArmor(EntityEquipmentSlot.FEET);
-        GameRegistry.register(helmetIronseed, new ResourceLocation(MOD_ID, "ironseedhelmet"));
-        GameRegistry.register(chestplateIronseed, new ResourceLocation(MOD_ID, "ironseedchestplate"));
-        GameRegistry.register(leggingsIronseed, new ResourceLocation(MOD_ID, "ironseedleggings"));
-        GameRegistry.register(bootsIronseed, new ResourceLocation(MOD_ID, "ironseedboots"));
+        event.getRegistry().register(new ItemIronseedArmor(new ResourceLocation(MOD_ID, "ironseedhelmet"), EntityEquipmentSlot.HEAD));
+        event.getRegistry().register(new ItemIronseedArmor(new ResourceLocation(MOD_ID, "ironseedchestplate"), EntityEquipmentSlot.CHEST));
+        event.getRegistry().register(new ItemIronseedArmor(new ResourceLocation(MOD_ID, "ironseedleggings"), EntityEquipmentSlot.LEGS));
+        event.getRegistry().register(new ItemIronseedArmor(new ResourceLocation(MOD_ID, "ironseedboots"), EntityEquipmentSlot.FEET));
 
         // RottenFlesh
-        bigRottenFlesh = new ItemBigrottenflesh();
-        steakRottenFlesh = new ItemSteakrottenflesh();
-        GameRegistry.register(bigRottenFlesh, new ResourceLocation(MOD_ID, "bigrottenflesh"));
-        GameRegistry.register(steakRottenFlesh, new ResourceLocation(MOD_ID, "steakrottenflesh"));
-
-        if (event.getSide().isClient()) {
-            ModelLoader.setCustomModelResourceLocation(ironseed, 0, new ModelResourceLocation(ironseed.getRegistryName(), "inventory"));
-
-            ModelLoader.setCustomModelResourceLocation(swordSeedstone, 0, new ModelResourceLocation(swordSeedstone.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(shovelSeedstone, 0, new ModelResourceLocation(shovelSeedstone.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(pickaxeSeedstone, 0, new ModelResourceLocation(pickaxeSeedstone.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(axeSeedstone, 0, new ModelResourceLocation(axeSeedstone.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(hoeSeedstone, 0, new ModelResourceLocation(hoeSeedstone.getRegistryName(), "inventory"));
-
-            ModelLoader.setCustomModelResourceLocation(swordIronseed, 0, new ModelResourceLocation(swordIronseed.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(shovelIronseed, 0, new ModelResourceLocation(shovelIronseed.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(pickaxeIronseed, 0, new ModelResourceLocation(pickaxeIronseed.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(axeIronseed, 0, new ModelResourceLocation(axeIronseed.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(hoeIronseed, 0, new ModelResourceLocation(hoeIronseed.getRegistryName(), "inventory"));
-        
-            ModelLoader.setCustomModelResourceLocation(helmetIronseed, 0, new ModelResourceLocation(helmetIronseed.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(chestplateIronseed, 0, new ModelResourceLocation(chestplateIronseed.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(leggingsIronseed, 0, new ModelResourceLocation(leggingsIronseed.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(bootsIronseed, 0, new ModelResourceLocation(bootsIronseed.getRegistryName(), "inventory"));
-
-            ModelLoader.setCustomModelResourceLocation(bigRottenFlesh, 0, new ModelResourceLocation(bigRottenFlesh.getRegistryName(), "inventory"));
-            ModelLoader.setCustomModelResourceLocation(steakRottenFlesh, 0, new ModelResourceLocation(steakRottenFlesh.getRegistryName(), "inventory"));
-        }
+        event.getRegistry().register(new ItemBigrottenflesh(new ResourceLocation(MOD_ID, "bigrottenflesh")));
+        event.getRegistry().register(new ItemSteakrottenflesh(new ResourceLocation(MOD_ID, "steakrottenflesh")));
 
     }
     
+    public static void registerModels(ModelRegistryEvent event){
+        ModelLoader.setCustomModelResourceLocation(ITEMS.ironseed, 0, new ModelResourceLocation(ITEMS.ironseed.getRegistryName(), "inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(ITEMS.swordSeedstone, 0, new ModelResourceLocation(ITEMS.swordSeedstone.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.shovelSeedstone, 0, new ModelResourceLocation(ITEMS.shovelSeedstone.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.pickaxeSeedstone, 0, new ModelResourceLocation(ITEMS.pickaxeSeedstone.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.axeSeedstone, 0, new ModelResourceLocation(ITEMS.axeSeedstone.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.hoeSeedstone, 0, new ModelResourceLocation(ITEMS.hoeSeedstone.getRegistryName(), "inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(ITEMS.swordIronseed, 0, new ModelResourceLocation(ITEMS.swordIronseed.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.shovelIronseed, 0, new ModelResourceLocation(ITEMS.shovelIronseed.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.pickaxeIronseed, 0, new ModelResourceLocation(ITEMS.pickaxeIronseed.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.axeIronseed, 0, new ModelResourceLocation(ITEMS.axeIronseed.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.hoeIronseed, 0, new ModelResourceLocation(ITEMS.hoeIronseed.getRegistryName(), "inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(ITEMS.helmetIronseed, 0, new ModelResourceLocation(ITEMS.helmetIronseed.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.chestplateIronseed, 0, new ModelResourceLocation(ITEMS.chestplateIronseed.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.leggingsIronseed, 0, new ModelResourceLocation(ITEMS.leggingsIronseed.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.bootsIronseed, 0, new ModelResourceLocation(ITEMS.bootsIronseed.getRegistryName(), "inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(ITEMS.bigRottenFlesh, 0, new ModelResourceLocation(ITEMS.bigRottenFlesh.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ITEMS.steakRottenFlesh, 0, new ModelResourceLocation(ITEMS.steakRottenFlesh.getRegistryName(), "inventory"));
+    }
 }

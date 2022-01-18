@@ -4,35 +4,15 @@ import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import seedstonemod.SeedstoneMod;
 
 public class ItemIronseedArmor extends ItemArmor {
-    private String armorname;
 
-    public ItemIronseedArmor(EntityEquipmentSlot type) {
-        super(SeedstoneItems.IRONSEEDARMOR, 0, type);
-        switch (type) {
-            case HEAD:
-                armorname = "ironseedhelmet";
-                break;
-
-            case CHEST:
-                armorname = "ironseedchestplate";
-                break;
-
-            case LEGS:
-                armorname = "ironseedleggings";
-                break;
-
-            case FEET:
-                armorname = "ironseedboots";
-                break;
-            default:
-                break;
-
-        }
-        // setRegistryName(armorname);
-        setUnlocalizedName(armorname);
+    public ItemIronseedArmor(ResourceLocation rl, EntityEquipmentSlot type) {
+        super(SeedstoneItems.ITEMS.IRONSEEDARMOR, 0, type);
+        setRegistryName(rl);
+        setUnlocalizedName(rl.getResourcePath());
         setCreativeTab(SeedstoneMod.tabSeedstone);
     }
 

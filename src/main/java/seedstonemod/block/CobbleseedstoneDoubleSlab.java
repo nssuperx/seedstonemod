@@ -1,12 +1,13 @@
 package seedstonemod.block;
 
-public class CobbleseedstoneDoubleSlab extends CobbleseedstoneSlab {
-    private final String blockname = "cobbleseedstonedoubleslab";
+import net.minecraft.util.ResourceLocation;
 
-    public CobbleseedstoneDoubleSlab() {
+public class CobbleseedstoneDoubleSlab extends CobbleseedstoneSlab {
+    
+    public CobbleseedstoneDoubleSlab(ResourceLocation rl) {
         super(true);
-        // this.setRegistryName(blockname);
-        this.setUnlocalizedName(blockname);
+        this.setRegistryName(rl);
+        this.setUnlocalizedName(rl.getResourcePath());
     }
 
     public final boolean isDouble() {

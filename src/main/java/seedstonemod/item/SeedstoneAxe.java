@@ -1,16 +1,16 @@
 package seedstonemod.item;
 
 import net.minecraft.item.ItemAxe;
+import net.minecraft.util.ResourceLocation;
 import seedstonemod.SeedstoneMod;
 
 public class SeedstoneAxe extends ItemAxe {
-    private final String toolname = "seedstoneaxe";
 
-    public SeedstoneAxe(ToolMaterial toolMaterial) {
+    public SeedstoneAxe(ResourceLocation rl, ToolMaterial toolMaterial) {
         super(toolMaterial, toolMaterial.getDamageVsEntity(), toolMaterial.getEfficiencyOnProperMaterial());
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        // setRegistryName(toolname);
-        setUnlocalizedName(toolname);
+        setRegistryName(rl);
+        setUnlocalizedName(rl.getResourcePath());
     }
 
 }

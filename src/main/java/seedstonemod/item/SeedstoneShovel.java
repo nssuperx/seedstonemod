@@ -1,16 +1,16 @@
 package seedstonemod.item;
 
 import net.minecraft.item.ItemSpade;
+import net.minecraft.util.ResourceLocation;
 import seedstonemod.SeedstoneMod;
 
 public class SeedstoneShovel extends ItemSpade {
-    private final String toolname = "seedstoneshovel";
 
-    public SeedstoneShovel(ToolMaterial toolMaterial) {
+    public SeedstoneShovel(ResourceLocation rl, ToolMaterial toolMaterial) {
         super(toolMaterial);
         setCreativeTab(SeedstoneMod.tabSeedstone);
-        // setRegistryName(toolname);
-        setUnlocalizedName(toolname);
+        setRegistryName(rl);
+        setUnlocalizedName(rl.getResourcePath());
     }
 
 }
