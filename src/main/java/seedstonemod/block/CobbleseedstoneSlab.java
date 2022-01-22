@@ -50,7 +50,7 @@ public class CobbleseedstoneSlab extends BlockSlab {
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(SeedstoneBlocks.BLOCKS.cobbleseedstoneSlabsingle);
+        return Item.getItemFromBlock(SeedstoneBlocks.cobbleseedstoneSlabsingle);
     }
 
     // public Item getItem(World worldIn, BlockPos pos) {
@@ -59,7 +59,7 @@ public class CobbleseedstoneSlab extends BlockSlab {
     // }
 
     protected ItemStack createStactedBlock(int not_use) {
-        return new ItemStack(SeedstoneBlocks.BLOCKS.cobbleseedstoneSlabsingle, 2, 0);
+        return new ItemStack(SeedstoneBlocks.cobbleseedstoneSlabsingle, 2, 0);
     }
 
     @Override
@@ -135,7 +135,7 @@ public class CobbleseedstoneSlab extends BlockSlab {
 
     @Override
     public boolean isDouble() {
-        return !(this == SeedstoneBlocks.BLOCKS.cobbleseedstoneSlabsingle);
+        return !(this == SeedstoneBlocks.cobbleseedstoneSlabsingle);
     }
 
     @Override

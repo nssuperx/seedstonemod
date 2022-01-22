@@ -10,7 +10,7 @@ import seedstonemod.SeedstoneMod;
 public class ItemIronseedArmor extends ItemArmor {
 
     public ItemIronseedArmor(ResourceLocation rl, EntityEquipmentSlot type) {
-        super(SeedstoneItems.ITEMS.IRONSEEDARMOR, 0, type);
+        super(SeedstoneItems.IRONSEEDARMOR, 0, type);
         setRegistryName(rl);
         setUnlocalizedName(rl.getResourcePath());
         setCreativeTab(SeedstoneMod.tabSeedstone);

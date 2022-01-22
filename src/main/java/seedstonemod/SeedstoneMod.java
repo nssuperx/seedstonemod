@@ -29,6 +29,11 @@ public class SeedstoneMod {
     public static ModMetadata meta;
 
     public static CreativeTabs tabSeedstone = new SeedstoneTab("Seedstonetab");
+
+    // @Mod.EventHandler
+    // public void construct(FMLConstructionEvent event) {
+    //     MinecraftForge.EVENT_BUS.register(this);
+    // }
     
     @SubscribeEvent
     protected static void registerItems(RegistryEvent.Register<Item> event) {

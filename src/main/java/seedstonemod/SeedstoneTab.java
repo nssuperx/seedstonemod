@@ -11,7 +11,7 @@ public class SeedstoneTab extends CreativeTabs {
 
     @Override
     public ItemStack getTabIconItem() {
-        return new ItemStack(SeedstoneBlocks.BLOCKS.blockSeedstone);
+        return new ItemStack(SeedstoneBlocks.blockSeedstone);
     }
 
 }
