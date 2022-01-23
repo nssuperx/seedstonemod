@@ -1,11 +1,13 @@
 package seedstonemod;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Metadata;
 import net.minecraftforge.fml.common.ModMetadata;
+import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -15,7 +17,7 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-@Mod(modid = SeedstoneMod.MOD_ID, name = SeedstoneMod.MOD_NAME, version = SeedstoneMod.MOD_VERSION, dependencies = SeedstoneMod.MOD_DEPENDENCIES, acceptedMinecraftVersions = SeedstoneMod.MOD_ACCEPTED_MC_VERSIONS, useMetadata = true)
+@Mod(modid = SeedstoneMod.MOD_ID, name = SeedstoneMod.MOD_NAME, version = SeedstoneMod.MOD_VERSION, dependencies = SeedstoneMod.MOD_DEPENDENCIES, acceptedMinecraftVersions = SeedstoneMod.MOD_ACCEPTED_MC_VERSIONS)
 public class SeedstoneMod {
     public static final String MOD_ID = "seedstoneMod";
     public static final String MOD_NAME = "SeedstoneMod";
@@ -30,10 +32,10 @@ public class SeedstoneMod {
 
     public static CreativeTabs tabSeedstone = new SeedstoneTab("Seedstonetab");
 
-    // @Mod.EventHandler
-    // public void construct(FMLConstructionEvent event) {
-    //     MinecraftForge.EVENT_BUS.register(this);
-    // }
+    @Mod.EventHandler
+    public void construct(FMLConstructionEvent event) {
+        MinecraftForge.EVENT_BUS.register(this);
+    }
     
     @SubscribeEvent
     protected static void registerItems(RegistryEvent.Register<Item> event) {
@@ -48,19 +50,20 @@ public class SeedstoneMod {
 
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event){
+        SeedstoneBlocks.registerModels(event);
+        SeedstoneItems.registerModels(event);
     }
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        // ModInfo.loadInfo(meta);
-        SeedstoneBlocks.SetModels(event);
+        ModInfo.loadInfo(meta);
     }
 
 
     @EventHandler
     public void Init(FMLInitializationEvent event) {
 
-        SeedstoneRecipes.registerRecipes();
+        // SeedstoneRecipes.registerRecipes();
 
     }
 

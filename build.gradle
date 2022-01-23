@@ -76,6 +76,15 @@ processResources {
     }
 }
 
+
+copy {
+    delete {
+        delete "$buildDir/classes/java/main"
+    }
+    into "$buildDir/classes/java/main"
+    from sourceSets.main.resources
+}
+
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
