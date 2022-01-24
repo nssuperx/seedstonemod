@@ -38,8 +38,8 @@ public class SeedstoneBlocks {
     public static void registerItems(RegistryEvent.Register<Item> event){
         event.getRegistry().register(new ItemBlock(blockSeedstone).setRegistryName(blockSeedstoneRL));
         event.getRegistry().register(new ItemBlock(blockCobbleseedstone).setRegistryName(blockCobbleseedstoneRL));
-        event.getRegistry().register(new ItemBlock(stairsCobbleseedstone).setRegistryName(blockSeedstoneRL));
-        event.getRegistry().register(new ItemBlock(cobbleseedstoneSlabsingle).setRegistryName(blockSeedstoneRL));
+        event.getRegistry().register(new ItemBlock(stairsCobbleseedstone).setRegistryName(stairsCobbleseedstoneRL));
+        event.getRegistry().register(new ItemBlock(cobbleseedstoneSlabsingle).setRegistryName(cobbleseedstoneSlabsingleRL));
     }
 
     public static void registerModels(ModelRegistryEvent event){

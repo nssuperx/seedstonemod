@@ -1,5 +1,18 @@
 {
+    "forge_marker": 1,
+    "defaults": {
+      "textures": {
+        "particle": "aseedstonemod:blocks/cobbleseedstoneblock"
+      },
+      "model": "seedstonemod:cobbleseedstoneblock",
+      "uvlock": false
+    },
     "variants": {
-        "normal": { "model": "seedstonemod:cobbleseedstoneblock" }
+      "normal": [{
+  
+      }],
+      "inventory": [{
+  
+      }]
     }
 }

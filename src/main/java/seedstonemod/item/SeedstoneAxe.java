@@ -7,7 +7,7 @@ import seedstonemod.SeedstoneMod;
 public class SeedstoneAxe extends ItemAxe {
 
     public SeedstoneAxe(ResourceLocation rl, ToolMaterial toolMaterial) {
-        super(toolMaterial);
+        super(toolMaterial, toolMaterial.getAttackDamage(), toolMaterial.getEfficiency());
         setCreativeTab(SeedstoneMod.tabSeedstone);
         setRegistryName(rl);
         setUnlocalizedName(rl.getResourcePath());

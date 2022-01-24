@@ -40,19 +40,19 @@ public class SeedstoneMod
     }
     
     @SubscribeEvent
-    protected static void registerItems(RegistryEvent.Register<Item> event) {
+    public void registerItems(RegistryEvent.Register<Item> event) {
         SeedstoneBlocks.registerItems(event);
         SeedstoneItems.registerItems(event);
     }
 
     @SubscribeEvent
-    protected static void registerBlocks(RegistryEvent.Register<Block> event) {
+    public void registerBlocks(RegistryEvent.Register<Block> event) {
         SeedstoneBlocks.registerBlocks(event);
     }
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
-    public static void registerModels(ModelRegistryEvent event){
+    public void registerModels(ModelRegistryEvent event){
         SeedstoneBlocks.registerModels(event);
         SeedstoneItems.registerModels(event);
     }
