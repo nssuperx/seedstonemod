@@ -1,0 +1,9 @@
+{
+    "java.configuration.runtimes": [
+        {
+            "default": true,
+            "name": "JavaSE-1.8",
+            "path": "C:\\LOCAL\\jdk\\jdk1.8.0_352"
+        }
+    ],
+}

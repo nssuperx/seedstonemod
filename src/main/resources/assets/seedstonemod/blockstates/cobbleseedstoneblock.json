@@ -2,7 +2,7 @@
     "forge_marker": 1,
     "defaults": {
       "textures": {
-        "particle": "aseedstonemod:blocks/cobbleseedstoneblock"
+        "particle": "seedstonemod:blocks/cobbleseedstoneblock"
       },
       "model": "seedstonemod:cobbleseedstoneblock",
       "uvlock": false
